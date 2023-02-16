@@ -6,7 +6,6 @@ const DarkMode = () => {
 
   return (
     <ActionIcon
-      sx={{ position: "fixed", right: "20px", top: "30%", zIndex: 99 }}
       variant="outline"
       color={dark ? "yellow" : "blue"}
       onClick={() => toggleColorScheme()}
