@@ -13,6 +13,7 @@ const DarkmodeLocale = () => {
         padding="xl"
         size="md"
         position="right"
+        transition="slide-left"
       >
         <DarkMode />
         <NativeSelect
@@ -28,8 +29,8 @@ const DarkmodeLocale = () => {
             position: "fixed",
             marginTop: "50px",
             right: "320px",
-            transition: "0.2s",
             zIndex: "9999",
+            transition: "0.3s"
           }}
         >
           Settings
@@ -42,6 +43,7 @@ const DarkmodeLocale = () => {
             marginTop: "50px",
             right: "5px",
             zIndex: "5",
+            transition: "0.3s"
           }}
         >
           Settings
