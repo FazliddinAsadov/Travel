@@ -3,11 +3,11 @@ import { createStyles } from "@mantine/core";
 const useStyles = createStyles(() => {
   return {
     section: {
-      padding: "100px 0",
+      padding: "50px 0",
       backgroundColor: "#F6F8F9",
     },
     container: {
-      width: "90%",
+      width: "100%",
       margin: "0 auto",
     },
     cart: {
