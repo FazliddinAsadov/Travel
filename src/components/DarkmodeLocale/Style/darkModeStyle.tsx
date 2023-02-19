@@ -1,6 +1,6 @@
 import { createStyles } from "@mantine/core";
 
-const useStyles = createStyles(() => {
+const useStyles = createStyles((theme) => {
   return {
     itemsOne: {
       width: "50px",
@@ -11,7 +11,7 @@ const useStyles = createStyles(() => {
       position: "fixed",
       marginTop: "50px",
       right: "320px",
-      zIndex: "9999",
+      zIndex: 9999,
       transition: "0.3s",
       borderTopLeftRadius: "10px",
       borderBottomLeftRadius: "10px",
@@ -27,7 +27,7 @@ const useStyles = createStyles(() => {
       position: "fixed",
       marginTop: "50px",
       right: "5px",
-      zIndex: "5",
+      zIndex: 5,
       transition: "0.3s",
       borderBottomLeftRadius: "10px",
       borderTopLeftRadius: "10px",
@@ -36,4 +36,5 @@ const useStyles = createStyles(() => {
     },
   };
 });
+
 export default useStyles;

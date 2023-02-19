@@ -1,8 +1,8 @@
 import DarkMode from "@components/darkMode/DarkLightMode";
-import { ActionIcon, Drawer, NativeSelect, Box } from "@mantine/core";
 import { useState } from "react";
+import { Drawer, NativeSelect, Box, createStyles } from "@mantine/core";
 import { FiSettings } from "react-icons/fi";
-import useStyles from "./Style/DrawerStyle";
+import useStyles from "./Style/darkModeStyle";
 
 const DarkmodeLocale = () => {
   const [open, setOpen] = useState(false);
