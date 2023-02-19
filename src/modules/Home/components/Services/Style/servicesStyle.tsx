@@ -2,11 +2,9 @@ import { createStyles } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
   root: {
-    backgroundColor: "#11284b",
+    backgroundColor: "#F6F8F9",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundImage:
-      "linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80)",
     paddingTop: theme.spacing.xl * 3,
     paddingBottom: theme.spacing.xl * 3,
   },
@@ -14,10 +12,11 @@ const useStyles = createStyles((theme) => ({
   inner: {
     display: "flex",
     justifyContent: "space-between",
-
+    alignItems: "center",
     [theme.fn.smallerThan("md")]: {
       flexDirection: "column",
     },
+    paddingTop: "30px",
   },
 
   image: {
@@ -37,39 +36,93 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    color: theme.white,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    lineHeight: 1.05,
+    fontWeight: 700,
     maxWidth: 500,
-    fontSize: 48,
+    fontSize: 24,
 
     [theme.fn.smallerThan("md")]: {
       maxWidth: "100%",
-      fontSize: 34,
+      fontSize: 24,
       lineHeight: 1.15,
     },
   },
 
-  description: {
-    color: theme.white,
-    opacity: 0.75,
-    maxWidth: 500,
+  descrOne: {
+    fontSize: "12px",
 
     [theme.fn.smallerThan("md")]: {
       maxWidth: "100%",
     },
   },
 
-  control: {
-    paddingLeft: 50,
-    paddingRight: 50,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: 22,
+  textItems: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "5px",
+    fontSize: "12px",
+  },
+  flex: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: "5px",
+  },
+  check: {
+    backgroundColor: "#fff",
+    color: "#FFC527",
+  },
+  descrSeven: {
+    fontSize: "12px",
+  },
 
-    [theme.fn.smallerThan("md")]: {
-      width: "100%",
+  items: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    "@media (max-width: 755px)": {
+      flexDirection: "column",
     },
+  },
+  item: {
+    width: "20%",
+    height: "200px",
+    paddingTop: "5%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyItems: "center",
+    flexWrap: "wrap",
+    gap: "25px",
+    cursor: "pointer",
+    borderBottom: "3px solid rgba(0,0,0,0.5)",
+    "&:hover": {
+      borderBottom: "3px solid #FFC527",
+    },
+  },
+
+  icon: {
+    color: "#FFC527",
+    fontSize: "56px",
+    padding: "10px",
+    border: "2px solid #FFC527",
+    borderRadius: "100%",
+  },
+
+  cartImage: {
+    width: "400px",
+    height: "350px",
+    border: "10px solid #fff",
+    marginTop: "5%",
+    boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+  },
+  img: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
   },
 }));
 export default useStyles;

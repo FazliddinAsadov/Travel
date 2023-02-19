@@ -5,7 +5,6 @@ const useStyles = createStyles((theme) => {
     head: {
       position: "relative",
       width: "100%",
-      height: "50vh",
       backgroundColor: theme.colorScheme === "dark" ? "#000" : "#fff",
     },
     triangle: {
@@ -23,7 +22,6 @@ const useStyles = createStyles((theme) => {
       width: "60%",
       margin: "0 auto",
       textAlign: "center",
-      paddingTop: "5%",
     },
     title: {
       fontSize: "36px",
