@@ -1,11 +1,4 @@
-import {
-  BackgroundImage,
-  Box,
-  Center,
-  Group,
-  Text,
-  Button,
-} from "@mantine/core";
+import { BackgroundImage, Box, Button, Group, Text } from "@mantine/core";
 import { headerLocaleEn } from "./locale";
 import useStyles from "./style/headerStyle";
 
@@ -16,7 +9,8 @@ const Header = (props: Props) => {
   return (
     <Box className={classes.head} mx="auto">
       <BackgroundImage
-        src="https://www.moradhamdy.com/morad/traveltour-demo/images/files/sliders/banner/img-19.jpg"
+        src="https://www.agro.uz/wp-content/uploads/2021/10/namangan.jpg"
+        // src={imgBg}
         radius="sm"
         className={classes.imgBox}
       >

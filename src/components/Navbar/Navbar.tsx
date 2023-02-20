@@ -1,6 +1,7 @@
 import {
+  Box,
   Burger,
-  Container,
+  Button,
   Group,
   Header,
   Paper,
@@ -13,6 +14,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import navLink from "./components/data";
+import navbarLocaleEn from "./locale";
 import useStyles from "./styles/navStyle";
 
 const HEADER_HEIGHT = 75;
@@ -46,10 +48,13 @@ const Navbar = () => {
 
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
+      <Box className={classes.header}>
+        <Text className={classes.title}>Namangan_Travel</Text>
       <Container className={classes.header}>
         <Text className={classes.textLeft}>Namangan_Travel</Text>
         <Group spacing={5} className={classes.links}>
           {items}
+          <Button className={classes.btnBuoking}>{navbarLocaleEn.btn}</Button>
         </Group>
 
         <Burger
@@ -61,15 +66,14 @@ const Navbar = () => {
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (
-            <Paper className={classes.dropdown} withBorder style={styles}>
-              {items}
-            </Paper>
+            <Box>
+              <Paper className={classes.dropdown} withBorder style={styles}>
+                {items}
+              </Paper>
+            </Box>
           )}
         </Transition>
-        <button className={classes.Sign_btn}>Sign in</button>
-
-        {/* <ChangeLang /> */}
-      </Container>
+      </Box>
     </Header>
   );
 };

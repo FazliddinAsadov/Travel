@@ -5,10 +5,15 @@ const useStyles = createStyles((theme) => {
     root: {
       position: "relative",
       zIndex: 1,
+      width: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
     },
 
     dropdown: {
       position: "absolute",
+      top: 60,
       left: 0,
       right: 0,
       zIndex: 0,
@@ -23,10 +28,15 @@ const useStyles = createStyles((theme) => {
     },
 
     header: {
+      width: "90%",
+      margin: "0 auto",
       display: "flex",
-      justifyContent: "space-between",
       alignItems: "center",
-      height: "100%",
+      justifyContent: "space-between",
+    },
+    title: {
+      fontSize: 24,
+      fontWeight: 700,
     },
 
     links: {
@@ -37,6 +47,7 @@ const useStyles = createStyles((theme) => {
 
     burger: {
       [theme.fn.largerThan("sm")]: {
+        justifyContent: "space-between",
         display: "none",
       },
       paddingLeft: "300px",
@@ -101,6 +112,24 @@ const useStyles = createStyles((theme) => {
     active: {
       backgroundColor: theme.colors[theme.primaryColor][6],
       color: theme.white,
+    },
+
+    linkActive: {
+      "&, &:hover": {
+        backgroundColor: theme.fn.variant({
+          variant: "light",
+          color: theme.primaryColor,
+        }).background,
+        color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
+          .color,
+      },
+    },
+    btnBuoking: {
+      backgroundColor: "rgba(0,0,0,0.5)",
+      border: "1px solid #FFC527",
+      "&:hover": {
+        backgroundColor: "#FFC527",
+      },
     },
   };
 });
