@@ -4,6 +4,7 @@ import Services from "@modules/Home/components/Services/Services";
 import { NextPage } from "next";
 import Header from "./components/Header/Header";
 import { homeLocaleEn } from "./locale";
+import Card from "@components/Card/Card";
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
         titleTwo={homeLocaleEn.popularTitleTwo}
       />
       <PopularCart />
+      <Card/>
       <TextPart
         title={homeLocaleEn.servicesTitle}
         titleTwo={homeLocaleEn.servicesTitleTwo}
