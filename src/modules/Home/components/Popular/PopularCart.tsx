@@ -7,13 +7,19 @@ const PopularCart = () => {
   const { classes } = useStyles();
 
   return (
-    <Grid className={classes.section}>
+    <Grid className={classes.section} px={10}>
       {popularData?.map((item: any) => (
-        <Grid.Col md={6} lg={3} key={item.id} className={classes.container}>
+        <Grid.Col
+          md={6}
+          lg={3}
+          sm={6}
+          key={item.id}
+          className={classes.container}
+        >
           <Box className={classes.cart}>
             <Image
               radius="md"
-              src={item.image}
+              src={item.image.src}
               alt="Random unsplash image"
               className={classes.image}
             />

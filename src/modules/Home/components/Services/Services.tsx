@@ -1,46 +1,77 @@
-import { Container, Title, Text, Button } from "@mantine/core";
+import plane from "@assets/hFSfhf15244901249255_l (1).jpg";
+import { Box, Container, Text, Title } from "@mantine/core";
+import Image from "next/image";
+import { BsFillCheckSquareFill } from "react-icons/bs";
+import { FaHotel } from "react-icons/fa";
+import { GiEarthAmerica, GiHeartBeats } from "react-icons/gi";
+import { ImAirplane } from "react-icons/im";
 import useStyles from "./Style/servicesStyle";
 import servicesLocaleEn from "./locale";
 
 const Services = () => {
   const { classes } = useStyles();
   return (
-    <div className={classes.root}>
+    <Box className={classes.root}>
       <Container size="lg">
-        <div className={classes.inner}>
-          <div className={classes.content}>
+        <Box className={classes.items}>
+          <Box className={classes.item}>
+            <ImAirplane className={classes.icon} />
+            <Text>{servicesLocaleEn.plane}</Text>
+          </Box>
+          <Box className={classes.item}>
+            <GiEarthAmerica className={classes.icon} />
+            <Text>{servicesLocaleEn.globus}</Text>
+          </Box>
+          <Box className={classes.item}>
+            <FaHotel className={classes.icon} />
+            <Text>{servicesLocaleEn.hotel}</Text>
+          </Box>
+          <Box className={classes.item}>
+            <GiHeartBeats className={classes.icon} />
+            <Text>{servicesLocaleEn.medical}</Text>
+          </Box>
+        </Box>
+
+        <Box className={classes.inner}>
+          <Box className={classes.content}>
             <Title className={classes.title}>
-              A{" "}
-              <Text
-                component="span"
-                inherit
-                variant="gradient"
-                gradient={{ from: "pink", to: "yellow" }}
-              >
-                fully featured
-              </Text>{" "}
-              React components library
+              <Text>{servicesLocaleEn.plane}</Text>
             </Title>
 
-            <Text className={classes.description} mt={30}>
-              Build fully functional accessible web applications with ease –
-              Mantine includes more than 100 customizable components and hooks
-              to cover you in any situation
-            </Text>
+            <Text my={20}>{servicesLocaleEn.descrOne}</Text>
 
-            <Button
-              variant="gradient"
-              gradient={{ from: "pink", to: "yellow" }}
-              size="xl"
-              className={classes.control}
-              mt={40}
-            >
-              Get started
-            </Button>
-          </div>
-        </div>
+            <Box className={classes.textItems} my={20}>
+              <Text className={classes.flex}>
+                <BsFillCheckSquareFill className={classes.check} />
+                {servicesLocaleEn.descrTwo}
+              </Text>
+              <Text className={classes.flex}>
+                <BsFillCheckSquareFill className={classes.check} />
+                {servicesLocaleEn.descrThree}
+              </Text>
+              <Text className={classes.flex}>
+                <BsFillCheckSquareFill className={classes.check} />
+                {servicesLocaleEn.descrFour}
+              </Text>
+              <Text className={classes.flex}>
+                <BsFillCheckSquareFill className={classes.check} />
+                {servicesLocaleEn.descrFive}
+              </Text>
+              <Text className={classes.flex}>
+                <BsFillCheckSquareFill className={classes.check} />
+                {servicesLocaleEn.descrSix}
+              </Text>
+            </Box>
+            <Text>{servicesLocaleEn.descrSeven}</Text>
+          </Box>
+          <Box>
+            <Box className={classes.cartImage}>
+              <Image src={plane} alt="error" className={classes.img} />
+            </Box>
+          </Box>
+        </Box>
       </Container>
-    </div>
+    </Box>
   );
 };
 export default Services;

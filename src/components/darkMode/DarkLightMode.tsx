@@ -1,4 +1,6 @@
 import { ActionIcon, useMantineColorScheme } from "@mantine/core";
+import { MdDarkMode } from "react-icons/md";
+import { CiDark } from "react-icons/ci";
 
 const DarkMode = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
@@ -11,7 +13,7 @@ const DarkMode = () => {
       onClick={() => toggleColorScheme()}
       title="Toggle color scheme"
     >
-      {dark ? 1 : 0}
+      {dark ? <CiDark /> : <MdDarkMode />}
     </ActionIcon>
   );
 };

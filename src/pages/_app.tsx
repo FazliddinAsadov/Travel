@@ -8,6 +8,8 @@ import Layout from "@layouts/Layout";
 import { ColorScheme, ColorSchemeProvider } from "@mantine/core";
 import { useHotkeys, useLocalStorage } from "@mantine/hooks";
 import NextProgress from "next-progress";
+import { useState } from "react";
+import "./../styles/global.css";
 
 export enum Lang {
   uz = "uz",
@@ -16,6 +18,7 @@ export enum Lang {
 }
 
 function MyApp({ Component, pageProps, router }: AppProps) {
+  const [load, setLoad] = useState(true);
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
     key: "mantine-color-scheme",
     defaultValue: "light",

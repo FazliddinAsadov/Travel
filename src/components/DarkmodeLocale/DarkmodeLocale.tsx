@@ -1,9 +1,12 @@
 import DarkMode from "@components/darkMode/DarkLightMode";
-import { Button, Drawer, NativeSelect } from "@mantine/core";
-import React, { useState } from "react";
+import { useState } from "react";
+import { Drawer, NativeSelect, Box, createStyles } from "@mantine/core";
+import { FiSettings } from "react-icons/fi";
+import useStyles from "./Style/darkModeStyle";
 
 const DarkmodeLocale = () => {
   const [open, setOpen] = useState(false);
+  const { classes } = useStyles();
 
   return (
     <div>
@@ -13,6 +16,7 @@ const DarkmodeLocale = () => {
         padding="xl"
         size="md"
         position="right"
+        transition="slide-left"
       >
         <DarkMode />
         <NativeSelect
@@ -22,30 +26,13 @@ const DarkmodeLocale = () => {
         />
       </Drawer>
       {open ? (
-        <Button
-          onClick={() => setOpen(false)}
-          style={{
-            position: "fixed",
-            marginTop: "50px",
-            right: "320px",
-            transition: "0.2s",
-            zIndex: "9999",
-          }}
-        >
-          Settings
-        </Button>
+        <Box onClick={() => setOpen(false)} className={classes.itemsOne}>
+          <FiSettings size={24} />
+        </Box>
       ) : (
-        <Button
-          onClick={() => setOpen(true)}
-          style={{
-            position: "fixed",
-            marginTop: "50px",
-            right: "5px",
-            zIndex: "5",
-          }}
-        >
-          Settings
-        </Button>
+        <Box onClick={() => setOpen(true)} className={classes.itemsTwo}>
+          <FiSettings size={24} />
+        </Box>
       )}
     </div>
   );
