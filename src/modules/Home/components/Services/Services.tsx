@@ -1,13 +1,12 @@
-import { Container, Title, Text, Box, Card } from "@mantine/core";
+import plane from "@assets/hFSfhf15244901249255_l (1).jpg";
+import { Box, Container, Text, Title } from "@mantine/core";
+import Image from "next/image";
+import { BsFillCheckSquareFill } from "react-icons/bs";
+import { FaHotel } from "react-icons/fa";
+import { GiEarthAmerica, GiHeartBeats } from "react-icons/gi";
+import { ImAirplane } from "react-icons/im";
 import useStyles from "./Style/servicesStyle";
 import servicesLocaleEn from "./locale";
-import { ImAirplane } from "react-icons/im";
-import { GiEarthAmerica } from "react-icons/gi";
-import { FaHotel } from "react-icons/fa";
-import { GiHeartBeats } from "react-icons/gi";
-import { BsFillCheckSquareFill } from "react-icons/bs";
-import Image from "next/image";
-import plane from "@assets/hFSfhf15244901249255_l (1).jpg";
 
 const Services = () => {
   const { classes } = useStyles();

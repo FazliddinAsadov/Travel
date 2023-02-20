@@ -4,6 +4,7 @@ import Services from "@modules/Home/components/Services/Services";
 import { NextPage } from "next";
 import Header from "./components/Header/Header";
 import { homeLocaleEn } from "./locale";
+import Maps from "@components/map/Map";
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +21,11 @@ const Home: NextPage = () => {
         titleTwo={homeLocaleEn.servicesTitleTwo}
       />
       <Services />
+      <TextPart
+        title={homeLocaleEn.mapTitle}
+        titleTwo={homeLocaleEn.mapTitleTwo}
+      />
+      <Maps />
     </div>
   );
 };

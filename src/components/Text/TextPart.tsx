@@ -16,7 +16,9 @@ const TextPart = ({ title, titleTwo }: Props) => {
         <Box className={classes.line}></Box>
         <Text>{titleTwo}</Text>
       </Group>
-      <Box className={classes.triangle}>.</Box>
+      <Group position="center">
+        <Box className={classes.triangle}>.</Box>
+      </Group>
     </Box>
   );
 };

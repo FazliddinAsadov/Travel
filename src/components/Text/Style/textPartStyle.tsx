@@ -10,7 +10,7 @@ const useStyles = createStyles((theme) => {
     triangle: {
       position: "absolute",
       bottom: "-24px",
-      left: "48.5%",
+      left: "48.3%",
       width: "50px",
       clipPath: "polygon(100% 0, 0 0, 50% 100%)",
       backgroundColor: theme.colorScheme === "dark" ? "#000" : "#fff",
