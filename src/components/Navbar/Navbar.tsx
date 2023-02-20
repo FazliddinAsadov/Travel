@@ -50,8 +50,6 @@ const Navbar = () => {
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Box className={classes.header}>
         <Text className={classes.title}>Namangan_Travel</Text>
-      <Container className={classes.header}>
-        <Text className={classes.textLeft}>Namangan_Travel</Text>
         <Group spacing={5} className={classes.links}>
           {items}
           <Button className={classes.btnBuoking}>{navbarLocaleEn.btn}</Button>
