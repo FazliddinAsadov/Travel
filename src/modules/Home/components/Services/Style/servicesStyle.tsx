@@ -1,6 +1,9 @@
 import { createStyles } from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
+  grid: {
+    width: "100%",
+  },
   root: {
     backgroundColor: "#F6F8F9",
     backgroundSize: "cover",

@@ -61,6 +61,7 @@ const useStyles = createStyles((theme) => {
       backgroundColor: "#FFC527",
       "&:hover": {
         backgroundColor: "rgba(0,0,0,0.3)",
+        border: "1px solid #FFC527",
       },
       "&:active": {
         color: theme.white,
