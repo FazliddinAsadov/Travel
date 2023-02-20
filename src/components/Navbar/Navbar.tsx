@@ -47,7 +47,7 @@ const Navbar = () => {
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
-        <Text>Namangan_Travel</Text>
+        <Text className={classes.textLeft}>Namangan_Travel</Text>
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
@@ -66,6 +66,8 @@ const Navbar = () => {
             </Paper>
           )}
         </Transition>
+        <button className={classes.Sign_btn}>Sign in</button>
+
         {/* <ChangeLang /> */}
       </Container>
     </Header>

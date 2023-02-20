@@ -39,6 +39,36 @@ const useStyles = createStyles((theme) => {
       [theme.fn.largerThan("sm")]: {
         display: "none",
       },
+      paddingLeft: "300px",
+    },
+
+    textLeft: {
+      maxWidth: "100px",
+      width: "100%",
+      paddingRight: "180px",
+      paddingLeft: "-180px",
+    },
+
+    Sign_btn: {
+      padding: "5px 20px",
+      color: "white",
+      marginLeft: "4px",
+      fontWeight: "bold",
+      backgroundColor: "#FFC527",
+      cursor: "pointer",
+      outline: "none",
+      border: "none",
+      borderRadius: "5px",
+      transition: "all 0.3s",
+
+      "&:active": {
+        transform: "scale(0.96)",
+        background: "black",
+      },
+
+      "&:hover": {
+        background: "rgba(255, 255, 255, 0.2)",
+      },
     },
 
     link: {
@@ -71,17 +101,6 @@ const useStyles = createStyles((theme) => {
     active: {
       backgroundColor: theme.colors[theme.primaryColor][6],
       color: theme.white,
-    },
-
-    linkActive: {
-      "&, &:hover": {
-        backgroundColor: theme.fn.variant({
-          variant: "light",
-          color: theme.primaryColor,
-        }).background,
-        color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
-          .color,
-      },
     },
   };
 });
