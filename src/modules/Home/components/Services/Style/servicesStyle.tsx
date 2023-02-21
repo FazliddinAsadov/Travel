@@ -36,6 +36,7 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("md")]: {
       marginRight: 0,
     },
+    color: "#000",
   },
 
   title: {
@@ -78,20 +79,21 @@ const useStyles = createStyles((theme) => ({
   descrSeven: {
     fontSize: "12px",
   },
-
-  items: {
+  itemFlex: {
     width: "100%",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     flexWrap: "wrap",
+    gap: 20,
     "@media (max-width: 755px)": {
       flexDirection: "column",
     },
   },
+
   item: {
-    width: "20%",
+    width: "250px",
     height: "200px",
     paddingTop: "5%",
     display: "flex",
@@ -116,11 +118,14 @@ const useStyles = createStyles((theme) => ({
   },
 
   cartImage: {
-    width: "400px",
+    width: "450px",
     height: "350px",
     border: "10px solid #fff",
     marginTop: "5%",
     boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+    "@media (max-width: 755px)": {
+      width: "380px",
+    },
   },
   img: {
     width: "100%",
