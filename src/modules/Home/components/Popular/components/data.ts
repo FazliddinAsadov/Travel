@@ -1,4 +1,4 @@
-import img1 from "@assets/bozorMullo.jpg";
+import img1 from "@assets/Undiscovered-Uzbekistan---Namangan--Ferghana-1626384955923.webp";
 import img2 from "@assets/jome.jpg";
 import img3 from "@assets/muzey.jpg";
 import img4 from "@assets/nam_fer.webp";
