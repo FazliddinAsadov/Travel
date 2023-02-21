@@ -18,7 +18,7 @@ const useStyles = createStyles((theme) => {
       lineHeight: "27px",
       fontFamily: "Poppins, sans-serif",
       [theme.fn.largerThan("sm")]: {
-        fontSize: "15px"
+        fontSize: "15px",
       },
     },
     image: {
@@ -27,13 +27,13 @@ const useStyles = createStyles((theme) => {
       marginTop: "15px",
     },
     p: {
-      fontWeight: "700",
+      fontWeight: 700,
     },
     link: {
       textDecoration: "none",
-      color: "yellow",
+      color: "#FFC527",
       fontSize: "15px",
-      fontWeight: "700",
+      fontWeight: 700,
     },
     wrap: {
       display: "flex",

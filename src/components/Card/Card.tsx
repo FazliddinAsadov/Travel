@@ -1,44 +1,52 @@
-import React from "react";
+import React, { useRef } from "react";
 import { cardDatas } from "./data/data";
 import Image from "next/image";
 import { Carousel } from "@mantine/carousel";
 import useStyles from "./styles/cardStyle";
-import { Box } from "@mantine/core";
+import { Box, Text } from "@mantine/core";
+import { IoMdPerson } from "react-icons/io";
+import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 
 const Card = () => {
   const { classes } = useStyles();
+  const autoplay = useRef(Autoplay({ delay: 3000 }));
 
   return (
-    <div>
+    <Box>
       <Carousel
         className={classes.carousel}
         sx={{ maxWidth: 1000 }}
         mx="auto"
         withIndicators
+        my={50}
+        loop={true}
+        plugins={[autoplay.current]}
+        withControls={false}
       >
         {cardDatas.map((cardData: any) => (
-          <Carousel.Slide>
+          <Carousel.Slide key={cardData.id}>
             <Image
-              src={cardData.image}
+              src={cardData?.image}
               className={classes.image}
-              alt=""
+              alt="error"
               width={150}
               height={150}
             />
-            <h3 className={classes.text}>{cardData.text}</h3>
-            <div className={classes.wrap}>
+            <Text className={classes.text}>{cardData?.text}</Text>
+            <Box className={classes.wrap}>
               <Box>
-                <Image src={cardData.icon} alt="" />
+                <IoMdPerson />
               </Box>
-              <p className={classes.p}>{cardData.p}</p>
-              <a className={classes.link} href="#">
-                {cardData.link}
-              </a>
-            </div>
+              <Text className={classes.p}>{cardData.p}</Text>
+              <Link className={classes.link} href="#">
+                {cardData?.link}
+              </Link>
+            </Box>
           </Carousel.Slide>
         ))}
       </Carousel>
-    </div>
+    </Box>
   );
 };
 

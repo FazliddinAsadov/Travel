@@ -17,7 +17,6 @@ const Home: NextPage = () => {
         titleTwo={homeLocaleEn.popularTitleTwo}
       />
       <PopularCart />
-      <Card/>
       <TextPart
         title={homeLocaleEn.servicesTitle}
         titleTwo={homeLocaleEn.servicesTitleTwo}
@@ -28,6 +27,11 @@ const Home: NextPage = () => {
         titleTwo={homeLocaleEn.mapTitleTwo}
       />
       <Maps />
+      <TextPart
+        title={homeLocaleEn.cilentTitle}
+        titleTwo={homeLocaleEn.cilentTitleTwo}
+      />
+      <Card />
     </div>
   );
 };
