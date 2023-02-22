@@ -6,6 +6,8 @@ import Header from "./components/Header/Header";
 import { homeLocaleEn } from "./locale";
 import Card from "@components/Card/Card";
 import Maps from "@components/map/Map";
+import Slider from "@components/Slider/Slider";
+import VideoPlay from "@components/VideoPlay/VideoPlay";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +19,7 @@ const Home: NextPage = () => {
         titleTwo={homeLocaleEn.popularTitleTwo}
       />
       <PopularCart />
+      <VideoPlay />
       <TextPart
         title={homeLocaleEn.servicesTitle}
         titleTwo={homeLocaleEn.servicesTitleTwo}
@@ -27,6 +30,11 @@ const Home: NextPage = () => {
         titleTwo={homeLocaleEn.mapTitleTwo}
       />
       <Maps />
+      <TextPart
+        title={homeLocaleEn.gitTitle}
+        titleTwo={homeLocaleEn.gitTitleTwo}
+      />
+      <Slider />
       <TextPart
         title={homeLocaleEn.cilentTitle}
         titleTwo={homeLocaleEn.cilentTitleTwo}

@@ -15,6 +15,9 @@ export const homeLocaleEn = {
   cilentTitle: "Happy Clients",
   cilentTitleTwo:
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+  gitTitle: "Our Experienced Guides",
+  gitTitleTwo:
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 };
 export const homeLocaleRu = {
   title: "Tespen",
