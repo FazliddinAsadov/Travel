@@ -105,12 +105,18 @@ const useStyles = createStyles((theme) => ({
     cursor: "pointer",
     borderBottom: "3px solid rgba(0,0,0,0.5)",
     "&:hover": {
+      fontWeight: 900,
+      color: "#FFC527",
       borderBottom: "3px solid #FFC527",
     },
   },
+  active: {
+    fontWeight: 900,
+    color: "#FFC527",
+    borderBottom: "4px solid #FFC527",
+  },
 
   icon: {
-    color: "#FFC527",
     fontSize: "56px",
     padding: "10px",
     border: "2px solid #FFC527",

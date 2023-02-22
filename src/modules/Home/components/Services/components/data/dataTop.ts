@@ -1,7 +1,6 @@
-import { ImAirplane } from "react-icons/im";
-import { BsFillCheckSquareFill } from "react-icons/bs";
 import { FaHotel } from "react-icons/fa";
 import { GiEarthAmerica, GiHeartBeats } from "react-icons/gi";
+import { ImAirplane } from "react-icons/im";
 
 const servicesDataTop = [
   {

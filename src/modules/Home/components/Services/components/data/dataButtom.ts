@@ -1,9 +1,9 @@
 import plane from "@assets/hFSfhf15244901249255_l (1).jpg";
+import world from "@assets/mount.jpg";
 import hotel from "@assets/hotel.webp";
-import restaurant from "@assets/restaurant.jpg";
 import medic from "@assets/medik.jpg";
 
-const servicesDataButtom = [
+const servisDataBottom = [
   {
     id: 1,
     title: "Airline Tickets",
@@ -22,7 +22,7 @@ const servicesDataButtom = [
   {
     id: 2,
     title: "Worldwide Tours",
-    image: hotel,
+    image: world,
     descr_top:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quas nihil, quae voluptatum numquam excepturi minus quibusdam corrupti necessitatibus. Nisi ducimus doloremque reiciendis ab tempore eius praesentium, sed magni quisquam.",
     text_one: "Nam sit amet eros vel nunc pharetra imperdiet.",
@@ -37,7 +37,7 @@ const servicesDataButtom = [
   {
     id: 3,
     title: "Hotel Reservation",
-    image: restaurant,
+    image: hotel,
     descr_top:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quas nihil, quae voluptatum numquam excepturi minus quibusdam corrupti necessitatibus. Nisi ducimus doloremque reiciendis ab tempore eius praesentium, sed magni quisquam.",
     text_one: "Nam sit amet eros vel nunc pharetra imperdiet.",
@@ -65,4 +65,4 @@ const servicesDataButtom = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas magna non ligula interdum mollis. Nullam dui mauris,aliquam id luctus sit amet.",
   },
 ];
-export default servicesDataButtom;
+export default servisDataBottom;

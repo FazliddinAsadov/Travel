@@ -2,6 +2,9 @@ import { createStyles } from "@mantine/core";
 
 const useStyles = createStyles(() => {
   return {
+    head: {
+      backgroundColor: "#F6F8F9",
+    },
     section: {
       padding: "50px 0",
       backgroundColor: "#F6F8F9",
