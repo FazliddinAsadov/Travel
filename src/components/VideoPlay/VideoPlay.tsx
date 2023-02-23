@@ -28,7 +28,7 @@ const VideoPlay = () => {
       <Modal
         opened={opened}
         onClose={() => setOpened(false)}
-        title="Beautiful Namangan"
+        title="Beautiful Namangan."
         size={"70%"}
       >
         <YoutubeVideo />
