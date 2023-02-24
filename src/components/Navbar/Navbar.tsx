@@ -19,13 +19,9 @@ import useStyles from "./styles/navStyle";
 
 const HEADER_HEIGHT = 75;
 
-// interface HeaderResponsiveProps {
-//   id: number;
-//   title: string;
-//   link: string;
-// }
-
-const Navbar = () => {
+const Navbar: React.FC<{
+  signIn: () => void;
+}> = ({ signIn }) => {
   const [opened, { toggle, close }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const theme = useMantineTheme();
@@ -52,7 +48,9 @@ const Navbar = () => {
         <Text className={classes.title}>Namangan_Travel</Text>
         <Group spacing={5} className={classes.links}>
           {items}
-          <Button className={classes.btnBuoking}>{navbarLocaleEn.btn}</Button>
+          <Button className={classes.btnBuoking} onClick={() => signIn()}>
+            {navbarLocaleEn.btn}
+          </Button>
         </Group>
 
         <Burger
