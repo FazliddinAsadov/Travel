@@ -95,7 +95,9 @@ const useStyles = createStyles((theme) => {
       },
     },
     btnBuoking: {
-      backgroundColor: "rgba(0,0,0,0.5)",
+      padding: "5px 25px",
+      backgroundColor:
+        theme.colorScheme === "dark" ? "rgba(0,0,0,0.5)" : "#FFC527",
       border: "1px solid #FFC527",
       "&:hover": {
         backgroundColor: "#FFC527",

@@ -16,7 +16,7 @@ const Layout = ({ children, ...props }: Props) => {
   };
   return (
     <>
-      {!signIn ? <SignIn signIn={handleSingIn} /> : null}
+      {/* {!signIn ? <SignIn signIn={handleSingIn} /> : null} */}
       <Navbar signIn={handleSingIn} />
       <DarkmodeLocale />
       <main {...props}>{children}</main>
