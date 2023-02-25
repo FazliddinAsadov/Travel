@@ -1,9 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import hotelLocaleUz from "./locale";
+import {
+  Autocomplete,
+  BackgroundImage,
+  Box,
+  Button,
+  Group,
+  Text,
+} from "@mantine/core";
+import useStyles from "./Style/hotelStyle";
+import {
+  Calendar,
+  DateRangePicker,
+  DateRangePickerValue,
+} from "@mantine/dates";
+import "dayjs/locale/de";
 
 type Props = {};
 
 const Hotel = (props: Props) => {
-  return <div>{hotelLocaleUz.title}</div>;
+  const { classes } = useStyles();
+  const [value, setValue] = useState<DateRangePickerValue>([
+    new Date(2021, 11, 1),
+    new Date(2021, 11, 5),
+  ]);
+  return (
+    <Box className={classes.head}>
+      <BackgroundImage
+        src="https://namangansquare.com/wp-content/uploads/2020/05/nsq-apartments-img-80.jpg"
+        // src={imgBg}
+        radius="sm"
+        className={classes.background}
+      >
+        <Box className={classes.backdrop}>
+          <Box className={classes.inputGroup}>
+            <Group className={classes.inputItem}>
+              <Autocomplete
+                placeholder="Enter your Address"
+                label={hotelLocaleUz.location}
+                withAsterisk
+                data={["Namangan", "Chust", "Chortoq", "Pop"]}
+              />
+              <DateRangePicker
+                label="Select Date"
+                placeholder="Enter your Date"
+                value={value}
+                onChange={setValue}
+              />
+              <Autocomplete
+                label="Select Room"
+                placeholder="Enter your Room"
+                data={["1x", "2x", "3x", "4x", "5x"]}
+              />
+              <Autocomplete
+                label="Person"
+                placeholder="Person"
+                data={["1-3", "3-5", "5-7"]}
+              />
+              <Button className={classes.searchBtn}>
+                {hotelLocaleUz.btnSearch}
+              </Button>
+            </Group>
+          </Box>
+        </Box>
+      </BackgroundImage>
+    </Box>
+  );
 };
 export default Hotel;

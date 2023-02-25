@@ -48,7 +48,10 @@ const Navbar: React.FC<{
         <Text className={classes.title}>Namangan_Travel</Text>
         <Group spacing={5} className={classes.links}>
           {items}
-          <Button className={classes.btnBuoking} onClick={() => signIn()}>
+          <Button
+            className={classes.btnBuoking}
+            // onClick={() => signIn()}
+          >
             {navbarLocaleEn.btn}
           </Button>
         </Group>
