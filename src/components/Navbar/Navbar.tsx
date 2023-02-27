@@ -29,13 +29,16 @@ const Navbar: React.FC<{
 
   const [activeId, setActiveId] = useState(0);
 
-  const items = navLink.map((item) => (
+  const items = navLink.map((item: any) => (
     <Link
       key={item.title}
       href={item.link}
       onClick={() => setActiveId(item.id)}
+      // className={cx(classes.link, {
+      //   linkActive: item.link === router.pathname,
+      // })}
       className={cx(classes.link, {
-        linkActive: item.link === router.pathname,
+        [classes.linkActive]: item.id === activeId,
       })}
     >
       <Text>{item.title}</Text>

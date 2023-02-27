@@ -110,10 +110,10 @@ const useStyles = createStyles((theme) => ({
       borderBottom: "3px solid #FFC527",
     },
   },
-  active: {
-    fontWeight: 900,
+  linkActive: {
     color: "#FFC527",
-    borderBottom: "4px solid #FFC527",
+    fontWeight: 900,
+    borderBottom: "3px solid #FFC527",
   },
 
   icon: {

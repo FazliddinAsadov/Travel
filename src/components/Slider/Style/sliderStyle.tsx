@@ -10,14 +10,14 @@ const useStyles = createStyles((theme) => {
       margin: "0 auto",
     },
     card: {
-      width: "100%",
+      width: "95%",
       border: "8px solid #fff",
       boxShadow:
         "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px}",
     },
     img: {
       width: "100%",
-      height: "45vh",
+      height: "30vh",
       margin: "0 auto",
       objectFit: "cover",
     },

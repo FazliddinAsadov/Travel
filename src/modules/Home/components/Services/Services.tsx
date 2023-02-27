@@ -9,11 +9,11 @@ import servicesDataTop from "./components/data/dataTop";
 const Services = () => {
   const { classes, cx } = useStyles();
   const [active, setActive] = useState<any>([]);
-  const [activeBox, setActiveBox] = useState(false);
+  const [activeBox, setActiveBox] = useState(0);
 
   const handleClick = (e: any) => {
     setActive(servisDataBottom.filter((el: any) => el.id === e.id));
-    setActiveBox(!activeBox);
+    setActiveBox(e.id);
   };
 
   return (
@@ -23,8 +23,11 @@ const Services = () => {
           <Box key={item.id}>
             <Box
               className={cx(classes.item, {
-                [classes.active]: active === !activeBox,
+                [classes.linkActive]: item.id === activeBox,
               })}
+              // className={cx(classes.link, {
+              //   [classes.linkActive]: item.id === activeId,
+              // })}
               onClick={() => handleClick(item)}
             >
               <item.icon className={classes.icon} />
