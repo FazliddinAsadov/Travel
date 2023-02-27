@@ -65,35 +65,19 @@ const useStyles = createStyles((theme) => {
       fontSize: theme.fontSizes.sm,
       fontWeight: 500,
 
-      "&:hover": {
-        color: theme.colorScheme === "dark" ? "#FFC527" : "#FFC527",
-      },
-      "&:active": {
-        backgroundColor: "#FFC527",
-        color: theme.white,
-      },
-
       [theme.fn.smallerThan("sm")]: {
         borderRadius: 0,
         padding: theme.spacing.md,
       },
     },
 
-    active: {
-      backgroundColor: theme.colors[theme.primaryColor][6],
-      color: theme.white,
+    linkActive: {
+      color: "#FFC527",
+      transition: "0.3s",
+      fontSize: 18,
+      borderBottom: "1px solid #FFC527",
     },
 
-    linkActive: {
-      "&, &:hover": {
-        backgroundColor: theme.fn.variant({
-          variant: "light",
-          color: theme.primaryColor,
-        }).background,
-        color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
-          .color,
-      },
-    },
     btnBuoking: {
       padding: "5px 25px",
       backgroundColor:
