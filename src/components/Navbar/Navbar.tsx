@@ -34,9 +34,6 @@ const Navbar: React.FC<{
       key={item.title}
       href={item.link}
       onClick={() => setActiveId(item.id)}
-      // className={cx(classes.link, {
-      //   linkActive: item.link === router.pathname,
-      // })}
       className={cx(classes.link, {
         [classes.linkActive]: item.id === activeId,
       })}
