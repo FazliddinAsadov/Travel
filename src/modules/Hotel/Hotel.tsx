@@ -15,6 +15,8 @@ import {
   DateRangePickerValue,
 } from "@mantine/dates";
 import "dayjs/locale/de";
+import CardSearchResault from "@components/CardSearchResault/CartSearchResault";
+import cardSerchResault from "@components/CardSearchResault/data/data";
 
 type Props = {};
 
@@ -64,6 +66,12 @@ const Hotel = (props: Props) => {
           </Box>
         </Box>
       </BackgroundImage>
+      <Box className={classes.group}>
+        <Box className={classes.item__left}>asdad</Box>
+        <Box className={classes.item__right}>
+          <CardSearchResault data={cardSerchResault} />
+        </Box>
+      </Box>
     </Box>
   );
 };

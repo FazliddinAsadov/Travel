@@ -29,7 +29,7 @@ const useStyles = createStyles((theme) => {
           ? theme.colors.dark[9]
           : theme.colors.dark[0],
       position: "relative",
-      top: "70%",
+      top: "10%",
       padding: 25,
       "@media (max-width: 800px)": {
         top: "30%",
@@ -49,6 +49,20 @@ const useStyles = createStyles((theme) => {
         backgroundColor: "rgba(0,0,0,0.8)",
         border: "1px solid #FFC527",
       },
+    },
+    group: {
+      width: "85%",
+      margin: "0 auto",
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
+    item__left: {
+      width: "20%",
+    },
+    item__right: {
+      width: "80%",
     },
   };
 });
