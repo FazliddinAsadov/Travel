@@ -62,7 +62,7 @@ const CardSearchResault: React.FC<{
                   <Box className={classes.square}>{item?.viewNumber}</Box>
                   <Text className={classes.view}>{item?.view}</Text>
                 </Box>
-                <Button className={classes.buy__btn}>Book Now</Button>
+                <Button className={classes.buy__btn}>Search</Button>
               </Box>
             </Box>
           </Group>

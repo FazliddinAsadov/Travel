@@ -5,7 +5,9 @@ import {
   BackgroundImage,
   Box,
   Button,
+  Checkbox,
   Group,
+  RangeSlider,
   Text,
 } from "@mantine/core";
 import useStyles from "./Style/hotelStyle";
@@ -67,7 +69,49 @@ const Hotel = (props: Props) => {
         </Box>
       </BackgroundImage>
       <Box className={classes.group}>
-        <Box className={classes.item__left}>asdad</Box>
+        <Box className={classes.item__left}>
+          <Box className={classes.cart__search}>
+            <Group position="center">
+              <Autocomplete
+                placeholder="Enter your Address"
+                label={hotelLocaleUz.location}
+                withAsterisk
+                data={["Namangan", "Chust", "Chortoq", "Pop"]}
+              />
+              <DateRangePicker
+                label="Select Date"
+                placeholder="Enter your Date"
+                value={value}
+                onChange={setValue}
+              />
+              <Autocomplete
+                label="Select Room"
+                placeholder="Enter your Room"
+                data={["1x", "2x", "3x", "4x", "5x"]}
+              />
+              <Autocomplete
+                label="Person"
+                placeholder="Person"
+                data={["1-3", "3-5", "5-7"]}
+              />
+              <Button>{hotelLocaleUz.btnSearch}</Button>
+            </Group>
+          </Box>
+          {/* filter */}
+          <Box className={classes.filter}>
+            <Text>Select Price</Text>
+            <RangeSlider
+              labelAlwaysOn
+              defaultValue={[10, 80]}
+              classNames={classes}
+            />
+            <Text>Category</Text>
+            <Checkbox label="I agree to sell my privacy" />
+            <Checkbox label="I agree to sell my privacy" />
+            <Checkbox label="I agree to sell my privacy" />
+            <Checkbox label="I agree to sell my privacy" />
+          </Box>
+        </Box>
         <Box className={classes.item__right}>
           <CardSearchResault data={cardSerchResault} />
         </Box>

@@ -22,7 +22,7 @@ const DarkmodeLocale = () => {
         <NativeSelect
           data={["English", "Uzbek"]}
           rightSectionWidth={40}
-          style={{ width: "170px", marginTop: "20px" }}
+          style={{ width: "100%", marginTop: "20px" }}
         />
       </Drawer>
       {open ? (
