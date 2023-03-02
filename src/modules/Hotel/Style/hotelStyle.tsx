@@ -52,7 +52,7 @@ const useStyles = createStyles((theme) => {
           ? theme.colors.dark[9]
           : theme.colors.dark[0],
       position: "relative",
-      top: "10%",
+      top: "50%",
       padding: 25,
       "@media (max-width: 800px)": {
         top: "30%",
