@@ -90,7 +90,7 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: "#FFC527",
     color: "#000",
     "&:hover": {
-      backgroundColor: "rgba(0,0,0,0.5)",
+      backgroundColor: "rgba(0,0,0,0.6)",
       border: "1px solid #FFC527",
       color: "#fff",
     },
