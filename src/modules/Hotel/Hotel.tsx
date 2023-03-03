@@ -19,7 +19,8 @@ import {
 import "dayjs/locale/de";
 import CardSearchResault from "@components/CardSearchResault/CartSearchResault";
 import cardSerchResault from "@components/CardSearchResault/data/data";
-
+import { AiFillStar } from "react-icons/ai";
+import Pagenation from "@components/Pagination/Pagination";
 type Props = {};
 
 const Hotel = (props: Props) => {
@@ -99,21 +100,48 @@ const Hotel = (props: Props) => {
           </Box>
           {/* filter */}
           <Box className={classes.filter}>
-            <Text>Select Price</Text>
+            <Text className={classes.title}>Select Price</Text>
             <RangeSlider
               labelAlwaysOn
               defaultValue={[10, 80]}
               classNames={classes}
             />
             <Text>Category</Text>
-            <Checkbox label="I agree to sell my privacy" />
-            <Checkbox label="I agree to sell my privacy" />
-            <Checkbox label="I agree to sell my privacy" />
-            <Checkbox label="I agree to sell my privacy" />
+            <Checkbox label="Holel" />
+            <Checkbox label="Villa" />
+            <Checkbox label="Special" />
+            <Checkbox label="Appartmen" />
+          </Box>
+          <Box className={classes.filter}>
+            <Text className={classes.title}>Star Category</Text>
+            <Box>
+              <Box className={classes.star__flex}>
+                <Text>3 Star</Text>
+                <Box className={classes.icon__star}>
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                </Box>
+              </Box>
+              <Box className={classes.star__flex}>
+                <Text>2 Star</Text>
+                <Box className={classes.icon__star}>
+                  <AiFillStar />
+                  <AiFillStar />
+                </Box>
+              </Box>
+              <Box className={classes.star__flex}>
+                <Text>1 Star</Text>
+                <Box className={classes.icon__star}>
+                  <AiFillStar />
+                </Box>
+              </Box>
+            </Box>
           </Box>
         </Box>
         <Box className={classes.item__right}>
           <CardSearchResault data={cardSerchResault} />
+          <Pagenation />
         </Box>
       </Box>
     </Box>

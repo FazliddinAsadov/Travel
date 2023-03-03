@@ -29,7 +29,7 @@ const CardSearchResault: React.FC<{
           className={classes.card}
           key={item.id}
         >
-          <Group noWrap spacing={0} p={16}>
+          <Group noWrap spacing={0} p={4}>
             <Box>
               <Image src={item?.imageGeneral} height={200} width={250} />
             </Box>
