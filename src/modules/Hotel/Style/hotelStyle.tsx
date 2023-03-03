@@ -99,6 +99,9 @@ const useStyles = createStyles((theme) => {
       },
     },
     item__right: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "start",
       width: "80%",
       "@media (max-width: 576px)": {
         width: "100%",
@@ -118,6 +121,18 @@ const useStyles = createStyles((theme) => {
       display: "flex",
       flexDirection: "column",
       gap: 20,
+    },
+    star__flex: {
+      fontWeight: 700,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
+    title: {
+      fontWeight: 900,
+    },
+    icon__star: {
+      color: "#FFC527",
     },
   };
 });
