@@ -10,13 +10,14 @@ const useSttyles = createStyles(() => {
     head: {
       width: "100%",
       display: "flex",
-      flexWrap: "wrap",
       alignItems: "center",
       justifyContent: "space-between",
-      gap: 10,
     },
     card: {
-      width: "24%",
+      width: "300px",
+      "@media (max-width:576px)": {
+        width: "350px",
+      },
     },
     title: {
       fontWeight: 900,
