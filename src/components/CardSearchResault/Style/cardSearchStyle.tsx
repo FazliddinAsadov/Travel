@@ -22,7 +22,7 @@ const useStyles = createStyles((theme) => ({
   },
   cardItem: {
     width: "80%",
-    margin: "10% auto",
+    margin: "0 auto",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",

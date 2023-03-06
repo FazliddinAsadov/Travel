@@ -48,11 +48,9 @@ const useStyles = createStyles((theme) => {
       gap: "20px",
       // backgroundColor: "rgba(0,0,0,0.8)",
       backgroundColor:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[9]
-          : theme.colors.dark[0],
+        theme.colorScheme === "dark" ? theme.colors.dark[9] : "#fff",
       position: "relative",
-      top: "50%",
+      top: "80%",
       padding: 25,
       "@media (max-width: 800px)": {
         top: "30%",
@@ -103,6 +101,7 @@ const useStyles = createStyles((theme) => {
       flexDirection: "column",
       justifyContent: "start",
       width: "80%",
+      gap: 30,
       "@media (max-width: 576px)": {
         width: "100%",
       },
@@ -115,7 +114,7 @@ const useStyles = createStyles((theme) => {
 
     filter: {
       width: "100%",
-      height: "50vh",
+      height: "auto",
       border: "2px solid #FFC527",
       padding: "10px",
       display: "flex",

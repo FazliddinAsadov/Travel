@@ -21,6 +21,10 @@ import CardSearchResault from "@components/CardSearchResault/CartSearchResault";
 import cardSerchResault from "@components/CardSearchResault/data/data";
 import { AiFillStar } from "react-icons/ai";
 import Pagenation from "@components/Pagination/Pagination";
+import Maps from "@components/map/Map";
+import CardSquare from "@components/CardSqure/CardSquare";
+import dataPopularHotel from "./components/dataPopularHotel";
+import TextPart from "@components/Text/TextPart";
 type Props = {};
 
 const Hotel = (props: Props) => {
@@ -98,6 +102,9 @@ const Hotel = (props: Props) => {
               <Button>{hotelLocaleUz.btnSearch}</Button>
             </Group>
           </Box>
+          <Box>
+            <Maps width={200} height={100} />
+          </Box>
           {/* filter */}
           <Box className={classes.filter}>
             <Text className={classes.title}>Select Price</Text>
@@ -144,6 +151,11 @@ const Hotel = (props: Props) => {
           <Pagenation />
         </Box>
       </Box>
+      <TextPart
+        title={hotelLocaleUz.popularHotelTitle}
+        titleTwo={hotelLocaleUz.popularHotelDescr}
+      />
+      <CardSquare data={dataPopularHotel} />
     </Box>
   );
 };
