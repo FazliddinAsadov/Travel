@@ -14,6 +14,7 @@ import { HiLocationMarker } from "react-icons/hi";
 import { FaWifi, FaGlassMartini, FaDumbbell } from "react-icons/fa";
 import { ImSpoonKnife } from "react-icons/im";
 import { FiMonitor } from "react-icons/fi";
+import Pagination from "@components/Pagination/Pagination";
 const CardSearchResault: React.FC<{
   data: any;
 }> = ({ data }) => {
@@ -29,7 +30,7 @@ const CardSearchResault: React.FC<{
           className={classes.card}
           key={item.id}
         >
-          <Group noWrap spacing={0} p={4}>
+          <Group noWrap spacing={0}>
             <Box>
               <Image src={item?.imageGeneral} height={200} width={250} />
             </Box>

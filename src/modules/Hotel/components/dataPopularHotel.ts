@@ -1,78 +1,88 @@
-import oydinPlaza from "@assets/oydinPlaza.jpg";
-
-const cardSerchResault = [
+const dataPopularHotel = [
   {
     id: 1,
-    imageGeneral: oydinPlaza,
+    imageGeneral: "",
     image: [
       {
         id: 1,
-        img: oydinPlaza,
+        img: "",
       },
     ],
     title: "Oydin Plaza Hotel",
     address: "Namangan ",
     descr: "lorem ipsum dolor sit amet",
     category: "Holel",
-    price: 700000,
+    price: 70,
     discount: 10,
     view: "Exsellent",
     viewNumber: 8,
+    person: 1,
+    beds: 2,
+    bathroom: 1,
   },
   {
     id: 2,
-    imageGeneral: oydinPlaza,
+    imageGeneral: "",
     image: [
       {
         id: 1,
-        img: oydinPlaza,
+        img: "",
       },
     ],
     title: "Oydin Plaza Hotel",
     address: "Namangan ",
     descr: "lorem ipsum dolor sit amet",
     category: "Holel",
-    price: 700000,
+    price: 80,
     discount: 10,
     view: "Exsellent",
     viewNumber: 8,
+    person: 1,
+    beds: 2,
+    bathroom: 1,
   },
   {
     id: 3,
-    imageGeneral: oydinPlaza,
+    imageGeneral: "",
     image: [
       {
         id: 1,
-        img: oydinPlaza,
+        img: "",
       },
     ],
     title: "Oydin Plaza Hotel",
     address: "Namangan ",
     descr: "lorem ipsum dolor sit amet",
     category: "Holel",
-    price: 700000,
+    price: 60,
     discount: 10,
     view: "Exsellent",
     viewNumber: 8,
+    person: 1,
+    beds: 2,
+    bathroom: 1,
   },
   {
     id: 4,
-    imageGeneral: oydinPlaza,
+    imageGeneral: "",
     image: [
       {
         id: 1,
-        img: oydinPlaza,
+        img: "",
       },
     ],
     title: "Oydin Plaza Hotel",
     address: "Namangan ",
     descr: "lorem ipsum dolor sit amet",
     category: "Holel",
-    price: 700000,
+    price: 88,
     discount: 10,
     view: "Exsellent",
     viewNumber: 8,
+    person: 1,
+    beds: 2,
+    bathroom: 1,
   },
 ];
 
-export default cardSerchResault;
+export default dataPopularHotel;
