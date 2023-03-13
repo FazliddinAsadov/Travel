@@ -1,38 +1,40 @@
-import React, { useState } from "react";
-import hotelLocaleUz from "./locale";
+import CardSquare from "@components/CardSqure/CardSquare";
+import TextPart from "@components/Text/TextPart";
 import {
   Autocomplete,
   BackgroundImage,
   Box,
   Button,
-  Checkbox,
   Group,
-  RangeSlider,
-  Text,
 } from "@mantine/core";
-import useStyles from "./Style/hotelStyle";
-import {
-  Calendar,
-  DateRangePicker,
-  DateRangePickerValue,
-} from "@mantine/dates";
+import { DatePickerInput } from "@mantine/dates";
 import "dayjs/locale/de";
-import CardSearchResault from "@components/CardSearchResault/CartSearchResault";
-import cardSerchResault from "@components/CardSearchResault/data/data";
-import { AiFillStar } from "react-icons/ai";
-import Pagenation from "@components/Pagination/Pagination";
-import Maps from "@components/map/Map";
-import CardSquare from "@components/CardSqure/CardSquare";
+import { useState } from "react";
+import useStyles from "./Style/hotelStyle";
 import dataPopularHotel from "./components/dataPopularHotel";
-import TextPart from "@components/Text/TextPart";
+import SearchResault from "./components/searchResault/SearchResault";
+import hotelLocaleUz from "./locale";
+import cardSerchResault from "@components/CardSearchResault/data/data";
+
 type Props = {};
 
 const Hotel = (props: Props) => {
   const { classes } = useStyles();
-  const [value, setValue] = useState<DateRangePickerValue>([
-    new Date(2021, 11, 1),
-    new Date(2021, 11, 5),
-  ]);
+  const [value, setValue] = useState<[Date | null, Date | null]>([null, null]);
+
+  const [srchAns, setSrchAns] = useState<any>([]);
+
+  const addSearch = (e: any) => {
+    if (e.title === "All") {
+      setSrchAns(cardSerchResault);
+    } else {
+      const res = cardSerchResault.filter(
+        (item: any) => item?.category === e.title
+      );
+      setSrchAns(res);
+    }
+  };
+
   return (
     <Box className={classes.head}>
       <BackgroundImage
@@ -50,11 +52,14 @@ const Hotel = (props: Props) => {
                 withAsterisk
                 data={["Namangan", "Chust", "Chortoq", "Pop"]}
               />
-              <DateRangePicker
+              <DatePickerInput
+                type="range"
                 label="Select Date"
-                placeholder="Enter your Date"
+                placeholder="Select Date"
                 value={value}
                 onChange={setValue}
+                mx="auto"
+                maw={400}
               />
               <Autocomplete
                 label="Select Room"
@@ -73,84 +78,7 @@ const Hotel = (props: Props) => {
           </Box>
         </Box>
       </BackgroundImage>
-      <Box className={classes.group}>
-        <Box className={classes.item__left}>
-          <Box className={classes.cart__search}>
-            <Group position="center">
-              <Autocomplete
-                placeholder="Enter your Address"
-                label={hotelLocaleUz.location}
-                withAsterisk
-                data={["Namangan", "Chust", "Chortoq", "Pop"]}
-              />
-              <DateRangePicker
-                label="Select Date"
-                placeholder="Enter your Date"
-                value={value}
-                onChange={setValue}
-              />
-              <Autocomplete
-                label="Select Room"
-                placeholder="Enter your Room"
-                data={["1x", "2x", "3x", "4x", "5x"]}
-              />
-              <Autocomplete
-                label="Person"
-                placeholder="Person"
-                data={["1-3", "3-5", "5-7"]}
-              />
-              <Button>{hotelLocaleUz.btnSearch}</Button>
-            </Group>
-          </Box>
-          <Box>
-            <Maps width={200} height={100} />
-          </Box>
-          {/* filter */}
-          <Box className={classes.filter}>
-            <Text className={classes.title}>Select Price</Text>
-            <RangeSlider
-              labelAlwaysOn
-              defaultValue={[10, 80]}
-              classNames={classes}
-            />
-            <Text>Category</Text>
-            <Checkbox label="Holel" />
-            <Checkbox label="Villa" />
-            <Checkbox label="Special" />
-            <Checkbox label="Appartmen" />
-          </Box>
-          <Box className={classes.filter}>
-            <Text className={classes.title}>Star Category</Text>
-            <Box>
-              <Box className={classes.star__flex}>
-                <Text>3 Star</Text>
-                <Box className={classes.icon__star}>
-                  <AiFillStar />
-                  <AiFillStar />
-                  <AiFillStar />
-                </Box>
-              </Box>
-              <Box className={classes.star__flex}>
-                <Text>2 Star</Text>
-                <Box className={classes.icon__star}>
-                  <AiFillStar />
-                  <AiFillStar />
-                </Box>
-              </Box>
-              <Box className={classes.star__flex}>
-                <Text>1 Star</Text>
-                <Box className={classes.icon__star}>
-                  <AiFillStar />
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-        <Box className={classes.item__right}>
-          <CardSearchResault data={cardSerchResault} />
-          <Pagenation />
-        </Box>
-      </Box>
+      <SearchResault data={srchAns} addSearch={addSearch} />
       <TextPart
         title={hotelLocaleUz.popularHotelTitle}
         titleTwo={hotelLocaleUz.popularHotelDescr}
