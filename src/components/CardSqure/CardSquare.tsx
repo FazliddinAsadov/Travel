@@ -10,8 +10,6 @@ type Props = {
 };
 
 const CardSquare = ({ data }: Props) => {
-  console.log(data);
-
   const { classes } = useSttyles();
   return (
     <Box className={classes.container}>
