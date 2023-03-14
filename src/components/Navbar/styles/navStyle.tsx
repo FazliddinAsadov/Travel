@@ -40,13 +40,13 @@ const useStyles = createStyles((theme) => {
     },
 
     links: {
-      [theme.fn.smallerThan("sm")]: {
+      [theme.fn.smallerThan("md")]: {
         display: "none",
       },
     },
 
     burger: {
-      [theme.fn.largerThan("sm")]: {
+      [theme.fn.largerThan("md")]: {
         justifyContent: "space-between",
         display: "none",
       },

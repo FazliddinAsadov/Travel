@@ -1,7 +1,7 @@
 import { createStyles } from "@mantine/core";
 import bg from "@assets/play.avif";
 
-const useStayles = createStyles(() => {
+const useStayles = createStyles((theme) => {
   return {
     bg: {
       width: "100%",
@@ -30,6 +30,10 @@ const useStayles = createStyles(() => {
       fontSize: 48,
       fontWeight: 700,
       color: "#FFC527",
+      [theme.fn.smallerThan("md")]: {
+        textAlign: "center",
+        fontSize: 30,
+      }
     },
     line: {
       width: "20%",

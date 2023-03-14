@@ -5,10 +5,16 @@ const useStyles = createStyles((theme) => {
     head: {
       maxWidth: "100%",
       height: "90vh",
+      [theme.fn.smallerThan("xl")]: {
+        height: "100vh",
+      },
     },
     imgBox: {
       width: "100%",
       height: "90vh",
+      [theme.fn.smallerThan("xl")]: {
+        height: "100vh",
+      },
     },
     cols: {
       width: "70%",
@@ -17,6 +23,11 @@ const useStyles = createStyles((theme) => {
       display: "flex",
       flexDirection: "column",
       paddingTop: "8%",
+    },
+    welcome: {
+      [theme.fn.smallerThan("sm")]: {
+        fontSize: 30,
+      },
     },
     first: {
       color: "white",
