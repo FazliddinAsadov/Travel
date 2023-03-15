@@ -25,6 +25,10 @@ const useStayles = createStyles((theme) => {
     titleOne: {
       fontSize: 48,
       fontWeight: 700,
+      [theme.fn.smallerThan("sm")]: {
+        fontSize: 30,
+        textAlign: "center",
+      }
     },
     titleTwo: {
       fontSize: 48,

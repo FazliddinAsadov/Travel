@@ -10,7 +10,8 @@ const useStyles = createStyles((theme) => {
       height: "400px",
       [theme.fn.largerThan("sm")]: {
         flexWrap: "wrap",
-        height: "400px",
+        height: "450px",
+        marginBottom: "50px",
       },
     },
     text: {
