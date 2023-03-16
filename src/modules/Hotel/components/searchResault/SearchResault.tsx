@@ -19,6 +19,7 @@ import { AiFillStar } from "react-icons/ai";
 import useSearchResStyle from "./style/useSearchResStyle ";
 import hotelLocaleUz from "@modules/Hotel/locale";
 import categoryData from "@services/api/categoryData";
+import { RangeSliders } from "@components/RengeSlider/RengeSliders";
 
 // export interface SearchResProps {
 //   image: string;
@@ -48,9 +49,6 @@ type Props = {
 const SearchResault = ({ data, addSearch }: Props) => {
   const { classes } = useSearchResStyle();
   const [value, setValue] = useState<[Date | null, Date | null]>([null, null]);
-  const [srchAns, setSrchAns] = useState<any>([]);
-
-  console.log(categoryData);
 
   return (
     <Box className={classes.group}>
@@ -62,6 +60,7 @@ const SearchResault = ({ data, addSearch }: Props) => {
               label={hotelLocaleUz.location}
               withAsterisk
               data={["Namangan", "Chust", "Chortoq", "Pop"]}
+              sx={{ width: "80%" }}
             />
             <DatePickerInput
               type="range"
@@ -71,16 +70,19 @@ const SearchResault = ({ data, addSearch }: Props) => {
               onChange={setValue}
               mx="auto"
               maw={400}
+              sx={{ width: "80%" }}
             />
             <Autocomplete
               label="Select Room"
               placeholder="Enter your Room"
               data={["1x", "2x", "3x", "4x", "5x"]}
+              sx={{ width: "80%" }}
             />
             <Autocomplete
               label="Person"
               placeholder="Person"
               data={["1-3", "3-5", "5-7"]}
+              sx={{ width: "80%" }}
             />
             <Button>{hotelLocaleUz.btnSearch}</Button>
           </Group>
@@ -91,11 +93,7 @@ const SearchResault = ({ data, addSearch }: Props) => {
         {/* filter */}
         <Box className={classes.filter}>
           <Text className={classes.title}>Select Price</Text>
-          <RangeSlider
-            labelAlwaysOn
-            defaultValue={[10, 80]}
-            classNames={classes}
-          />
+          <RangeSliders />
           <Text>Category</Text>
 
           <Radio.Group name="" label="" description="" withAsterisk>
@@ -139,7 +137,7 @@ const SearchResault = ({ data, addSearch }: Props) => {
       </Box>
       <Box className={classes.item__right}>
         <CardSearchResault data={data} />
-        {data.length > 5 ? <Pagenation /> : null}
+        {data.length > 4 ? <Pagenation /> : null}
       </Box>
     </Box>
   );

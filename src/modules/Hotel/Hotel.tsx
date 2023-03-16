@@ -60,6 +60,7 @@ const Hotel = (props: Props) => {
                 onChange={setValue}
                 mx="auto"
                 maw={400}
+                sx={{ width: "100%" }}
               />
               <Autocomplete
                 label="Select Room"

@@ -111,7 +111,6 @@ const useSearchResStyle = createStyles((theme) => {
       height: "45vh",
       backgroundColor: "#FFC527",
     },
-
     filter: {
       width: "100%",
       height: "auto",
