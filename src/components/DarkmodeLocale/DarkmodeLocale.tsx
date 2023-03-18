@@ -16,7 +16,6 @@ const DarkmodeLocale = () => {
         padding="xl"
         size="md"
         position="right"
-        transition="slide-left"
       >
         <DarkMode />
         <NativeSelect

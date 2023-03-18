@@ -33,7 +33,12 @@ const CardSearchResault: React.FC<{
         >
           <Group noWrap spacing={0}>
             <Box>
-              <Image src={item?.imageGeneral} height={200} width={250} />
+              <Image
+                src={item?.imageGeneral}
+                alt="img"
+                height={200}
+                width={250}
+              />
             </Box>
             <Box className={classes.item__right}>
               <Box className={classes.title__item}>

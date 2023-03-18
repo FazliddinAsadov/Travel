@@ -8,8 +8,8 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: "#F6F8F9",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    paddingTop: theme.spacing.xl * 3,
-    paddingBottom: theme.spacing.xl * 3,
+    // paddingTop: theme.spacing.xl * 3,
+    // paddingBottom: theme.spacing.xl * 3,
   },
 
   inner: {
@@ -29,9 +29,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   content: {
-    paddingTop: theme.spacing.xl * 2,
-    paddingBottom: theme.spacing.xl * 2,
-    marginRight: theme.spacing.xl * 3,
+    // paddingTop: theme.spacing.xl * 2,
+    // paddingBottom: theme.spacing.xl * 2,
+    // marginRight: theme.spacing.xl * 3,
 
     [theme.fn.smallerThan("md")]: {
       marginRight: 0,
