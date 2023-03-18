@@ -32,6 +32,9 @@ const useStyles = createStyles((theme) => {
     background: {
       width: "100%",
       height: "90vh",
+      "@media (max-width: 800px)": {
+        height: "110vh"
+      },
     },
     backdrop: {
       width: "100%",
@@ -53,7 +56,7 @@ const useStyles = createStyles((theme) => {
       top: "80%",
       padding: 25,
       "@media (max-width: 800px)": {
-        top: "30%",
+        top: "60%",
       },
     },
     inputItem: {
