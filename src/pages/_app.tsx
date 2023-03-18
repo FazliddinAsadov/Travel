@@ -54,7 +54,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             withNormalizeCSS
             theme={{
               colorScheme,
-              breakpoints: { xs: 500, sm: 800, md: 1100, lg: 1200, xl: 1400 },
             }}
           >
             <NextProgress delay={300} options={{ showSpinner: false }} />

@@ -15,6 +15,7 @@ import { FaWifi, FaGlassMartini, FaDumbbell } from "react-icons/fa";
 import { ImSpoonKnife } from "react-icons/im";
 import { FiMonitor } from "react-icons/fi";
 import Pagination from "@components/Pagination/Pagination";
+import cardSerchResault from "./data/data";
 const CardSearchResault: React.FC<{
   data: any;
 }> = ({ data }) => {
@@ -22,7 +23,7 @@ const CardSearchResault: React.FC<{
 
   return (
     <Box className={classes.cardItem}>
-      {data.map((item: any) => (
+      {(data.length > 0 ? data : cardSerchResault).map((item: any) => (
         <Card
           withBorder
           radius="md"
@@ -32,7 +33,12 @@ const CardSearchResault: React.FC<{
         >
           <Group noWrap spacing={0}>
             <Box>
-              <Image src={item?.imageGeneral} height={200} width={250} />
+              <Image
+                src={item?.imageGeneral}
+                alt="img"
+                height={200}
+                width={250}
+              />
             </Box>
             <Box className={classes.item__right}>
               <Box className={classes.title__item}>
