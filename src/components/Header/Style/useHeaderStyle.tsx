@@ -1,6 +1,6 @@
 import { createStyles } from "@mantine/core";
 
-const useStyles = createStyles((theme) => {
+const useHeaderStyles = createStyles((theme) => {
   return {
     head: {
       maxWidth: "100%",
@@ -72,4 +72,4 @@ const useStyles = createStyles((theme) => {
     },
   };
 });
-export default useStyles;
+export default useHeaderStyles;
