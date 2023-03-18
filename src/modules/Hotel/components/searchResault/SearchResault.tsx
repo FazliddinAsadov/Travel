@@ -1,26 +1,18 @@
 import CardSearchResault from "@components/CardSearchResault/CartSearchResault";
-import cardSerchResault from "@components/CardSearchResault/data/data";
 import Pagenation from "@components/Pagination/Pagination";
+import { RangeSliders } from "@components/RengeSlider/RengeSliders";
 import Maps from "@components/map/Map";
-import {
-  Autocomplete,
-  Box,
-  Button,
-  Checkbox,
-  Group,
-  Radio,
-  RangeSlider,
-  Text,
-} from "@mantine/core";
+import { Autocomplete, Box, Button, Group, Radio, Text } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
+import hotelLocaleUz from "@modules/Hotel/locale";
+import categoryData from "@services/api/categoryData";
 import "dayjs/locale/de";
 import { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import useSearchResStyle from "./style/useSearchResStyle ";
-import hotelLocaleUz from "@modules/Hotel/locale";
-import categoryData from "@services/api/categoryData";
-import { RangeSliders } from "@components/RengeSlider/RengeSliders";
 
+const maps =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96400.1236573009!2d71.57458269966689!3d40.970446406753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4c1b2e60eea5%3A0x36ef7252c4c12106!2sNamangan%2C%20Uzbekistan!5e0!3m2!1sen!2sru!4v1679151939723!5m2!1sen!2sru";
 // export interface SearchResProps {
 //   image: string;
 //   currency: string;
@@ -88,7 +80,7 @@ const SearchResault = ({ data, addSearch }: Props) => {
           </Group>
         </Box>
         <Box>
-          <Maps width={200} height={100} />
+          <Maps width={200} height={100} please={maps} />
         </Box>
         {/* filter */}
         <Box className={classes.filter}>
