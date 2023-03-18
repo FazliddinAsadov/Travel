@@ -2,7 +2,6 @@ import img1 from "@assets/Undiscovered-Uzbekistan---Namangan--Ferghana-162638495
 import img2 from "@assets/jome.jpg";
 import img3 from "@assets/muzey.jpg";
 import img4 from "@assets/nam_fer.webp";
-import img5 from "@assets/Namangan1.jpg";
 import img6 from "@assets/namanganbogi.jpg";
 import img7 from "@assets/qosimxon.jpg";
 import img8 from "@assets/mountine.webp";
@@ -25,7 +24,7 @@ const popularData = [
   },
   {
     id: 5,
-    image: img5,
+    image: img1,
   },
   {
     id: 6,
