@@ -10,7 +10,7 @@ const useStyles = createStyles((theme) => {
       height: "50px",
       position: "fixed",
       marginTop: "50px",
-      right: "320px",
+      right: "380px",
       zIndex: 9999,
       transition: "0.3s",
       borderTopLeftRadius: "10px",

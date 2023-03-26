@@ -1,11 +1,11 @@
-import React from "react";
-import nationalHolidaysLocaleUz from "./locale";
-import { Box, Container } from "@mantine/core";
+import GridCard from "@components/GridCard/GridCart";
 import Header from "@components/Header/Header";
+import TextPart from "@components/Text/TextPart";
 import { Carousel } from "@mantine/carousel";
+import { Box } from "@mantine/core";
+import gridData from "@services/api/nationalholidatGrid";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import DateBox from "@modules/nationalHoliday/components/dateBox";
-import data from "./components/dateBox/data";
+import nationalHolidaysLocaleUz from "./locale";
 type Props = {};
 
 const NationalHolidays = (props: Props) => {
@@ -35,7 +35,21 @@ const NationalHolidays = (props: Props) => {
           />
         </Carousel.Slide>
       </Carousel>
-      <DateBox data={data} />
+      {/* <Group position="center">
+        <DateBox data={data} />
+      </Group> */}
+
+      <TextPart
+        title={nationalHolidaysLocaleUz.gridCartTitle}
+        titleTwo={nationalHolidaysLocaleUz.gridCartTitleTwo}
+      />
+
+      <GridCard data={gridData} />
+
+      {/* <TextPart
+        title={nationalHolidaysLocaleUz.statisicsTitle}
+        titleTwo={nationalHolidaysLocaleUz.statisicsTitleTwo}
+      /> */}
     </Box>
   );
 };

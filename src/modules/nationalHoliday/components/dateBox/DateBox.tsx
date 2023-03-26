@@ -1,6 +1,6 @@
 import { Box, Text } from "@mantine/core";
 import React from "react";
-import useDataStyle from "./useDataBox";
+import useDataStyle from "../dateBox/style/useDataBox";
 
 interface StatsGroupProps {
   data: { title: string; stats: string; description: string }[];

@@ -13,11 +13,8 @@ const useSttyles = createStyles(() => {
       flexWrap: "wrap",
       alignItems: "center",
       justifyContent: "space-between",
-      gap: 10,
     },
-    card: {
-      width: "24%",
-    },
+
     title: {
       fontWeight: 900,
     },

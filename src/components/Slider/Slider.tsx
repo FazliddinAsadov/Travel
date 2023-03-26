@@ -1,19 +1,16 @@
 import { Carousel } from "@mantine/carousel";
-import { Box, Card, Container, Text } from "@mantine/core";
-import useStyles from "./Style/sliderStyle";
-import dataGit from "./components/data";
-import Image from "next/image";
-import { AiFillStar } from "react-icons/ai";
-import { AiOutlineStar } from "react-icons/ai";
+import { Avatar, Button, Grid, Group, Paper, Text } from "@mantine/core";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
+import useStyles from "./Style/sliderStyle";
+import dataGit from "./components/data";
 
 const Slider = () => {
   const { classes } = useStyles();
   const autoplay = useRef(Autoplay({ delay: 2000 }));
 
   return (
-    <Box className={classes.head}>
+    <Grid py={30}>
       <Carousel
         withIndicators
         slideSize="33.333333%"
@@ -31,36 +28,47 @@ const Slider = () => {
       >
         {dataGit.map((git: any) => (
           <Carousel.Slide key={git.id}>
-            <Card className={classes.card}>
-              <Box>
-                <Image src={git?.image} alt="error" className={classes.img} />
-                <Box className={classes.textItem}>
-                  <Box className={classes.nameItem}>
-                    <Text className={classes.name}>{git?.name}</Text>
-                    <Box className={classes.iconItem}>
-                      <AiFillStar className={classes.iconLight} />
-                      <AiFillStar className={classes.iconLight} />
-                      <AiFillStar className={classes.iconLight} />
-                      <AiFillStar className={classes.iconLight} />
-                      <AiOutlineStar />
-                    </Box>
-                  </Box>
-                  <Text>{git?.descr}</Text>
-                  {git.prices.map((price: any) => (
-                    <Box className={classes.priceItem} key={price}>
-                      <Text>Hour ${price.hour}</Text>
-                      <Text>Day ${price.day}</Text>
-                      <Text>Month ${price.month}</Text>
-                    </Box>
+            <Grid.Col md={12} lg={12}>
+              <Paper radius="md" withBorder p="lg" className={classes.paper}>
+                <Avatar
+                  src="/images/git.jfif"
+                  size={120}
+                  radius={120}
+                  mx="auto"
+                />
+                <Text ta="center" fz="lg" weight={500} mt="md">
+                  {git?.name}
+                </Text>
+                <Text ta="center" c="dimmed" fz="sm">
+                  {git?.email}
+                </Text>
+                <Group mt="md" position="center" spacing={30}>
+                  {git?.prices.map((price: any, idx: number) => (
+                    <div key={idx}>
+                      <Text ta="center" fz="lg" fw={500}>
+                        {price.value}
+                      </Text>
+                      <Text ta="center" fz="sm" c="dimmed">
+                        {price.label}
+                      </Text>
+                    </div>
                   ))}
-                </Box>
-              </Box>
-            </Card>
+                </Group>
+                <Button
+                  variant="default"
+                  fullWidth
+                  mt="md"
+                  className={classes.sendBtn}
+                >
+                  Send message
+                </Button>
+              </Paper>
+            </Grid.Col>
           </Carousel.Slide>
         ))}
         {/* ...other slides */}
       </Carousel>
-    </Box>
+    </Grid>
   );
 };
 export default Slider;
