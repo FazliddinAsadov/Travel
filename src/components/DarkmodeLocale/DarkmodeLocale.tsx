@@ -13,8 +13,9 @@ const DarkmodeLocale = () => {
       <Drawer
         opened={open}
         onClose={() => setOpen(false)}
+        title="Settings"
         padding="xl"
-        size="md"
+        size="sm"
         position="right"
       >
         <DarkMode />

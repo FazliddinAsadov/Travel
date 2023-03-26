@@ -51,6 +51,17 @@ const useStyles = createStyles((theme) => {
       justifyContent: "space-between",
       fontWeight: 700,
     },
+    paper: {
+      width: "100%",
+      backgroundColor:
+        theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.white,
+    },
+    sendBtn: {
+      backgroundColor: "#FFC527",
+      "&hover": {
+        border: "1px solid #FFC527",
+      },
+    },
   };
 });
 

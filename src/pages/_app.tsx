@@ -56,7 +56,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
               colorScheme,
             }}
           >
-            <NextProgress delay={300} options={{ showSpinner: false }} />
+            <NextProgress
+              delay={300}
+              options={{ showSpinner: false }}
+              color="#FFC527"
+            />
             <Layout>
               <Component {...pageProps} />
             </Layout>

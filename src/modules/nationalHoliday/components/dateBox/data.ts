@@ -12,7 +12,7 @@ const data = [
       "13% less compared to last month, new user engagement up by 6%",
   },
   {
-    title: "Completed orders",
+    title: "People involved",
     stats: "1,994",
     description: "1994 orders were completed this month, 97% satisfaction rate",
   },

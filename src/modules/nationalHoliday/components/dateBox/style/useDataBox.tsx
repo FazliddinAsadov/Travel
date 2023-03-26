@@ -3,12 +3,10 @@ import { createStyles, rem } from "@mantine/core";
 const useDataStyle = createStyles((theme) => {
   return {
     head: {
+      width: "80%",
       position: "absolute",
-      bottom: "5%",
-      left: "6%",
-      "@media (max-width:576px)": {
-        left: "0%",
-      },
+      top: "80%",
+      "@media (max-width:576px)": {},
       backgroundColor:
         theme.colorScheme === "dark"
           ? theme.colors.dark[6]
@@ -17,20 +15,18 @@ const useDataStyle = createStyles((theme) => {
       padding: theme.spacing.xl,
       borderRadius: theme.radius.md,
       cursor: "pointer",
-
       "&:hover": {
         backgroundColor:
           theme.colorScheme === "dark"
             ? theme.colors.dark[5]
             : theme.colors.gray[1],
       },
+      zIndex: 9999,
     },
 
     root: {
       display: "flex",
-      backgroundImage: `linear-gradient(-60deg, ${
-        theme.colors[theme.primaryColor][4]
-      } 0%, ${theme.colors[theme.primaryColor][7]} 100%)`,
+      backgroundColor: "#FFC527",
       padding: `calc(${theme.spacing.xl} * 1.5)`,
       borderRadius: theme.radius.md,
 

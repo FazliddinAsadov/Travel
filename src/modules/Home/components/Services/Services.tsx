@@ -17,7 +17,7 @@ const Services = () => {
   };
 
   return (
-    <Box className={classes.root}>
+    <Box className={classes.root} py={50}>
       <Container size="lg" className={classes.itemFlex}>
         {servicesDataTop.map((item: any) => (
           <Box key={item.id}>
