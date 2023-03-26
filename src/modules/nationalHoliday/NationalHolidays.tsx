@@ -1,17 +1,11 @@
-import React from "react";
-import nationalHolidaysLocaleUz from "./locale";
-import { Box, Container, Grid, Group } from "@mantine/core";
-import Header from "@components/Header/Header";
-import { Carousel } from "@mantine/carousel";
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import DateBox from "@modules/nationalHoliday/components/dateBox";
-import data from "./components/dateBox/data";
-import GridCart from "@components/GridCard/GridCart";
-import TextPart from "@components/Text/TextPart";
 import GridCard from "@components/GridCard/GridCart";
+import Header from "@components/Header/Header";
+import TextPart from "@components/Text/TextPart";
+import { Carousel } from "@mantine/carousel";
+import { Box } from "@mantine/core";
 import gridData from "@services/api/nationalholidatGrid";
-import { Statistics } from "./components/statistics/Statistics";
-import statisticsData from "./components/statistics/data";
+import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import nationalHolidaysLocaleUz from "./locale";
 type Props = {};
 
 const NationalHolidays = (props: Props) => {
@@ -52,13 +46,10 @@ const NationalHolidays = (props: Props) => {
 
       <GridCard data={gridData} />
 
-      <TextPart
+      {/* <TextPart
         title={nationalHolidaysLocaleUz.statisicsTitle}
         titleTwo={nationalHolidaysLocaleUz.statisicsTitleTwo}
-      />
-      <Box sx={{ width: "80%", margin: "0 auto" }} py={50}>
-        <Statistics data={statisticsData} />
-      </Box>
+      /> */}
     </Box>
   );
 };
