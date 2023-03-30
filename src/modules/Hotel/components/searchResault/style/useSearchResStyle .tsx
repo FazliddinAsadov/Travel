@@ -84,14 +84,14 @@ const useSearchResStyle = createStyles((theme) => {
       margin: "10% auto",
       display: "flex",
       flexDirection: "row",
-      alignItems: "center",
       justifyContent: "space-between",
       "@media (max-width: 576px)": {
         flexDirection: "column",
       },
     },
     item__left: {
-      width: "20%",
+      width: "30%",
+      border: "2px solid #FFC527",
       "@media (max-width: 576px)": {
         width: "100%",
       },
@@ -107,9 +107,7 @@ const useSearchResStyle = createStyles((theme) => {
       },
     },
     cart__search: {
-      width: "100%",
       height: "45vh",
-      backgroundColor: "#FFC527",
     },
     filter: {
       width: "100%",

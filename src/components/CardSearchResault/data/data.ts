@@ -1,6 +1,6 @@
 import oydinPlaza from "@assets/oydinPlaza.jpg";
 
-const cardSerchResault = [
+const cardSerchResaultData = [
   {
     id: 1,
     imageGeneral: oydinPlaza,
@@ -11,7 +11,7 @@ const cardSerchResault = [
       },
     ],
     title: "Oydin Plaza Hotel",
-    address: "Namangan ",
+    address: "Namangan",
     descr: "lorem ipsum dolor sit amet",
     category: "Hotel",
     price: 700000,
@@ -29,7 +29,7 @@ const cardSerchResault = [
       },
     ],
     title: "Villa",
-    address: "Namangan ",
+    address: "Chust",
     descr: "lorem ipsum dolor sit amet",
     category: "Villa",
     price: 700000,
@@ -47,7 +47,7 @@ const cardSerchResault = [
       },
     ],
     title: "Oydin Plaza Hotel",
-    address: "Namangan ",
+    address: "Namangan",
     descr: "lorem ipsum dolor sit amet",
     category: "Hotel",
     price: 700000,
@@ -65,7 +65,7 @@ const cardSerchResault = [
       },
     ],
     title: "Orzu",
-    address: "Namangan ",
+    address: "Namangan",
     descr: "lorem ipsum dolor sit amet",
     category: "Special",
     price: 700000,
@@ -75,4 +75,4 @@ const cardSerchResault = [
   },
 ];
 
-export default cardSerchResault;
+export default cardSerchResaultData;

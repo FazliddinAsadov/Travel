@@ -1,10 +1,13 @@
-import { createStyles } from "@mantine/core";
+import { createStyles, rem } from "@mantine/core";
 
-const useStyles = createStyles((theme) => ({
+const useSearchResStyle = createStyles((theme) => ({
   card: {
-    width: "100%",
+    margin: "0  20px",
     backgroundColor:
       theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
+    "@media (max-width: 800px)": {
+      margin: "10px  0",
+    },
   },
 
   title: {
@@ -21,12 +24,10 @@ const useStyles = createStyles((theme) => ({
     gap: 10,
   },
   cardItem: {
-    width: "80%",
-    margin: "0 auto",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    gap: 20,
+    width: "100%",
+    "@media (max-width: 800px)": {
+      marginTop: "50px",
+    },
   },
   title__item: {
     display: "flex",
@@ -97,4 +98,4 @@ const useStyles = createStyles((theme) => ({
   },
   view: {},
 }));
-export default useStyles;
+export default useSearchResStyle;

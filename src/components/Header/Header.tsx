@@ -1,5 +1,6 @@
 import { BackgroundImage, Box, Button, Group, Text } from "@mantine/core";
 import useHeaderStyles from "./Style/useHeaderStyle";
+import ButtonMain from "@components/Button/ButtonMain";
 
 type Props = {
   image: string;
