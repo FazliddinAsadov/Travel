@@ -24,9 +24,9 @@ const CardSearchResault: React.FC<{
 
   return (
     <Box className={classes.cardItem} px={30}>
-      {inputsrch.length > 0 ? (
-        <Grid>
-          {inputsrch.map((item: any) => (
+      <Grid>
+        {(inputsrch?.length > 0 ? inputsrch : cardSerchResaultData).map(
+          (item: any) => (
             <Box key={item.id}>
               <Card withBorder radius="md" p={0} className={classes.card}>
                 <Grid.Col>
@@ -77,13 +77,9 @@ const CardSearchResault: React.FC<{
                 </Grid.Col>
               </Card>
             </Box>
-          ))}
-        </Grid>
-      ) : (
-        <Group position="center">
-          <Text size={24}>Topilmadi</Text>
-        </Group>
-      )}
+          )
+        )}
+      </Grid>
     </Box>
   );
 };
