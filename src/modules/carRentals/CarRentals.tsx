@@ -1,9 +1,22 @@
 import React from "react";
 import carRentalsLocaleUz from "./locale";
-
+import CarHeader from "./components/Header/Header";
+import TextPart from "@components/Text/TextPart";
 type Props = {};
 
 const CarRentals = (props: Props) => {
-  return <div>{carRentalsLocaleUz.title}</div>;
+  return (
+    <>
+      <CarHeader />
+      <TextPart
+        title={carRentalsLocaleUz.servicesTitle}
+        titleTwo={carRentalsLocaleUz.servicesTitleTwo}
+      />
+      <TextPart
+        title={carRentalsLocaleUz.aboutTitle}
+        titleTwo={carRentalsLocaleUz.aboutTitleTwo}
+      />
+    </>
+  );
 };
 export default CarRentals;
