@@ -15,7 +15,7 @@ const Card = () => {
       <Flex justify={"space-evenly"}>
         {CardData.map((data) => {
           return (
-            <div>
+            <div key={data.id}>
               <div className={classes.wrap}>
                 <div className={classes.imgBox}>
                   <h1>{data.imageBox.title}</h1>
