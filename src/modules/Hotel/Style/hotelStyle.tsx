@@ -40,7 +40,7 @@ const useStyles = createStyles((theme) => {
       position: "absolute",
     },
     inputGroup: {
-      width: "70%",
+      width: "65%",
       margin: "0 auto",
       display: "flex",
       alignItems: "center",
