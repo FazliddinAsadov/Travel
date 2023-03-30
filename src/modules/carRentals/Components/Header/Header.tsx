@@ -14,7 +14,7 @@ const Header = (props: Props) => {
         <h1 className={classes.first}>Cars Rentals</h1>
         <p className={classes.second}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever
           since the 1500s
         </p>
         <Button className={classes.btn}>Booking</Button>
