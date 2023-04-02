@@ -21,15 +21,12 @@ const useStyles = createStyles((theme) => {
       borderTopLeftRadius: 0,
       borderTopWidth: 0,
       overflow: "hidden",
-
       [theme.fn.largerThan("sm")]: {
         display: "none",
       },
     },
 
     header: {
-      width: "90%",
-      margin: "0 auto",
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
