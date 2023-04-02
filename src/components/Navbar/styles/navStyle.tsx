@@ -30,6 +30,9 @@ const useStyles = createStyles((theme) => {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
+      [theme.fn.largerThan("sm")]: {
+        padding: "0 50px",
+      },
     },
     title: {
       fontSize: 24,

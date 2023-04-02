@@ -62,10 +62,10 @@ const Navbar: React.FC<{
           onClick={toggle}
           className={classes.burger}
           size="sm"
-          mx={8}
+          mx={5}
         />
-        <Text className={classes.title}>Namangan_Travel</Text>
-        <Group spacing={5} className={classes.links}>
+        <Text className={classes.title}>{navbarLocaleEn.title}</Text>
+        <Group spacing={5} className={classes.links} pl={500}>
           {items}
         </Group>
 
@@ -88,10 +88,10 @@ const Navbar: React.FC<{
 
         <Menu.Dropdown>
           <Menu.Item onClick={handleSignIn} icon={<IconUser />}>
-            Sign In
+            {navbarLocaleEn.signin}
           </Menu.Item>
           <Menu.Item onClick={handleSignUp} icon={<IconUser />}>
-            Sign Up
+            {navbarLocaleEn.signup}
           </Menu.Item>
         </Menu.Dropdown>
       </Menu>

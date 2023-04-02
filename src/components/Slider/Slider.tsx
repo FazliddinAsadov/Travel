@@ -10,7 +10,7 @@ const Slider = () => {
   const autoplay = useRef(Autoplay({ delay: 2000 }));
 
   return (
-    <Grid py={30}>
+    <Grid py={30} m={0}>
       <Carousel
         withIndicators
         slideSize="33.333333%"
