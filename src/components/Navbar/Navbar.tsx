@@ -1,4 +1,5 @@
 import {
+  ActionIcon,
   Box,
   Burger,
   Button,
@@ -16,6 +17,7 @@ import { useState } from "react";
 import navLink from "./components/data";
 import navbarLocaleEn from "./locale";
 import useStyles from "./styles/navStyle";
+import { IconUserCircle } from "@tabler/icons-react";
 
 const HEADER_HEIGHT = 75;
 
@@ -29,6 +31,9 @@ const Navbar: React.FC<{
 
   const [activeId, setActiveId] = useState(0);
 
+  const handleSignIn = () => {
+    router.push("/signin");
+  };
   const items = navLink.map((item: any) => (
     <Link
       key={item.title}
@@ -48,13 +53,10 @@ const Navbar: React.FC<{
         <Text className={classes.title}>Namangan_Travel</Text>
         <Group spacing={5} className={classes.links}>
           {items}
-          <Button
-            className={classes.btnBuoking}
-            // onClick={() => signIn()}
-          >
-            {navbarLocaleEn.btn}
-          </Button>
         </Group>
+        <ActionIcon onClick={handleSignIn}>
+          <IconUserCircle size={36} />
+        </ActionIcon>
 
         <Burger
           opened={opened}
