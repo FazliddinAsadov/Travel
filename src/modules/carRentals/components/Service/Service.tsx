@@ -41,7 +41,7 @@ function ArticleCardVertical() {
         >
           {ServiceData.map((data: any) => {
             return (
-              <Group spacing={0}>
+              <Group spacing={0} key={data.id}>
                 <div className={classes.imgBox}>
                   <h1>{data.imgBox.text}</h1>
                 </div>
