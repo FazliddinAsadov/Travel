@@ -25,7 +25,7 @@ const useHeaderStyles = createStyles((theme) => {
 
       [theme.fn.smallerThan("xs")]: {
         width: "100%",
-        fontSize: 48,
+        fontSize: 36,
         lineHeight: 1.3,
       },
     },
@@ -36,7 +36,7 @@ const useHeaderStyles = createStyles((theme) => {
 
       [theme.fn.smallerThan("xs")]: {
         width: "100%",
-        fontSize: 40,
+        fontSize: 32,
         lineHeight: 1.3,
       },
     },
@@ -51,7 +51,7 @@ const useHeaderStyles = createStyles((theme) => {
       fontSize: "18px",
       [theme.fn.smallerThan("xs")]: {
         width: "100%",
-        fontSize: 16,
+        fontSize: 14,
         lineHeight: 1.3,
       },
     },
