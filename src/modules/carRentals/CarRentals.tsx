@@ -70,6 +70,7 @@ const CarRentals = (props: Props) => {
         title={carRentalsLocaleUz.servicesTitle}
         titleTwo={carRentalsLocaleUz.servicesTitleTwo}
       />
+
       <TextPart
         title={carRentalsLocaleUz.aboutTitle}
         titleTwo={carRentalsLocaleUz.aboutTitleTwo}
