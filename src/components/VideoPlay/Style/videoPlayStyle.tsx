@@ -25,11 +25,20 @@ const useStayles = createStyles(() => {
     titleOne: {
       fontSize: 48,
       fontWeight: 700,
+      "@media (max-width:576px)": {
+        fontSize: 24,
+      },
     },
     titleTwo: {
       fontSize: 48,
       fontWeight: 700,
       color: "#FFC527",
+      "@media (max-width:576px)": {
+        fontSize: 24,
+      },
+      "@media (max-width:800px)": {
+        fontSize: 24,
+      },
     },
     line: {
       width: "20%",
