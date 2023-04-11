@@ -7,6 +7,7 @@ import { DatePickerInput, TimeInput } from "@mantine/dates";
 import { useForm } from "@mantine/form";
 import useCarRentStyle from "./Style/useCarRentStyle";
 import { IconClock } from "@tabler/icons-react";
+import { ServicesItem } from "./components/services/Services";
 
 type Props = {};
 
@@ -70,7 +71,7 @@ const CarRentals = (props: Props) => {
         title={carRentalsLocaleUz.servicesTitle}
         titleTwo={carRentalsLocaleUz.servicesTitleTwo}
       />
-
+      <ServicesItem />
       <TextPart
         title={carRentalsLocaleUz.aboutTitle}
         titleTwo={carRentalsLocaleUz.aboutTitleTwo}
