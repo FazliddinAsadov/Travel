@@ -59,9 +59,12 @@ const useHeaderStyles = createStyles((theme) => {
       width: "25%",
       height: "50px",
       backgroundColor: "#FFC527",
+      color: "#000",
       "&:hover": {
-        backgroundColor: "rgba(0,0,0,0.3)",
+        transition: "0.5s ease",
+        backgroundColor: "rgba(0,0,0,0.7)",
         border: "1px solid #FFC527",
+        color: "#fff",
       },
       "&:active": {
         color: theme.white,
