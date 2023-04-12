@@ -4,7 +4,11 @@ const useCarRentStyle = createStyles(() => {
   return {
     inputBox: {
       width: "80%",
-      margin: " 0 auto",
+      margin: "0 auto",
+    },
+    submit: {
+      color: "#000",
+      backgroundColor: "#FFC527",
     },
   };
 });

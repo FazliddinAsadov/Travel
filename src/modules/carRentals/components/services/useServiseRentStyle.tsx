@@ -7,6 +7,7 @@ const useServiseRentStyle = createStyles((theme) => ({
   },
 
   title: {
+    fontSize: 14,
     fontWeight: 700,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     lineHeight: 1.2,
@@ -21,6 +22,10 @@ const useServiseRentStyle = createStyles((theme) => ({
     "@media (max-width:576px)": {
       width: "95%",
     },
+  },
+  readMore: {
+    backgroundColor: "#FFC527",
+    color: "#000",
   },
 }));
 

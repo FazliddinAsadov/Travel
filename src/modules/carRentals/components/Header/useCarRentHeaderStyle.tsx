@@ -2,15 +2,12 @@ import { createStyles, rem } from "@mantine/core";
 
 const useCarRentHeaderStyle = createStyles((theme) => ({
   wrapper: {
+    width: "85%",
+    margin: "0 auto",
     display: "flex",
     alignItems: "center",
     padding: `calc(${theme.spacing.xl} * 2)`,
     borderRadius: theme.radius.md,
-    backgroundColor:
-      theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.white,
-    border: `${rem(1)} solid ${
-      theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.colors.gray[3]
-    }`,
 
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column-reverse",

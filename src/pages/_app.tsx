@@ -10,6 +10,8 @@ import { useHotkeys, useLocalStorage } from "@mantine/hooks";
 import NextProgress from "next-progress";
 import { useState } from "react";
 import "./../styles/global.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export enum Lang {
   uz = "uz",
@@ -63,6 +65,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             />
             <Layout>
               <Component {...pageProps} />
+              <ToastContainer />
             </Layout>
           </MantineProvider>
         </ColorSchemeProvider>
