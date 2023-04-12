@@ -2,7 +2,9 @@ const carRentService = [
   {
     id: 1,
     category: "Mersedes-bens 223",
-    title: "The best laptop for Frontend engineers in 2022",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi reiciendis exercitationem eos, aperiam harum aut voluptates odio atque asperiores!",
+
     image: "/images/mersheader-removebg-preview.png",
     date: "Feb 6th",
     author: {
@@ -14,7 +16,9 @@ const carRentService = [
   {
     id: 2,
     category: "Mersedes-bens 223",
-    title: "The best laptop for Frontend engineers in 2022",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi reiciendis exercitationem eos, aperiam harum aut voluptates odio atque asperiores!",
+
     image: "/images/mersheader-removebg-preview.png",
     date: "Feb 6th",
     author: {
@@ -26,7 +30,9 @@ const carRentService = [
   {
     id: 3,
     category: "technology",
-    title: "The best laptop for Frontend engineers in 2022",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi reiciendis exercitationem eos, aperiam harum aut voluptates odio atque asperiores!",
+
     image: "/images/mersheader-removebg-preview.png",
     date: "Feb 6th",
     author: {
@@ -38,7 +44,9 @@ const carRentService = [
   {
     id: 4,
     category: "technology",
-    title: "The best laptop for Frontend engineers in 2022",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi reiciendis exercitationem eos, aperiam harum aut voluptates odio atque asperiores!",
+
     image: "/images/mersheader-removebg-preview.png",
     date: "Feb 6th",
     author: {

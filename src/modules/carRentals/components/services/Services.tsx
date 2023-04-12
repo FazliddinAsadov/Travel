@@ -1,7 +1,7 @@
-import { Avatar, Card, Grid, Group, Image, Text } from "@mantine/core";
+import { Avatar, Card, Grid, Group, Image, Text, Button } from "@mantine/core";
 import useServiseRentStyle from "./useServiseRentStyle";
 import carRentService from "@services/api/carRentService";
-
+import carRentalsLocaleUz from "@modules/carRentals/locale";
 interface ArticleCardVerticalProps {
   image: string;
   category: string;
@@ -39,12 +39,11 @@ export function ServicesItem() {
                     <Avatar size={20} src={item?.author.avatar} />
                     <Text size="xs">{item?.author.name}</Text>
                   </Group>
-                  <Text size="xs" color="dimmed">
-                    •
-                  </Text>
-                  <Text size="xs" color="dimmed">
-                    {item?.date}
-                  </Text>
+                </Group>
+                <Group pt={10}>
+                  <Button variant="contained" className={classes.readMore}>
+                    {carRentalsLocaleUz.readMore}
+                  </Button>
                 </Group>
               </div>
             </Group>
