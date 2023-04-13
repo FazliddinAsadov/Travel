@@ -25,7 +25,7 @@ const useHeaderStyles = createStyles((theme) => {
 
       [theme.fn.smallerThan("xs")]: {
         width: "100%",
-        fontSize: 48,
+        fontSize: 36,
         lineHeight: 1.3,
       },
     },
@@ -36,7 +36,7 @@ const useHeaderStyles = createStyles((theme) => {
 
       [theme.fn.smallerThan("xs")]: {
         width: "100%",
-        fontSize: 40,
+        fontSize: 32,
         lineHeight: 1.3,
       },
     },
@@ -51,7 +51,7 @@ const useHeaderStyles = createStyles((theme) => {
       fontSize: "18px",
       [theme.fn.smallerThan("xs")]: {
         width: "100%",
-        fontSize: 16,
+        fontSize: 14,
         lineHeight: 1.3,
       },
     },
@@ -59,9 +59,12 @@ const useHeaderStyles = createStyles((theme) => {
       width: "25%",
       height: "50px",
       backgroundColor: "#FFC527",
+      color: "#000",
       "&:hover": {
-        backgroundColor: "rgba(0,0,0,0.3)",
+        transition: "0.5s ease",
+        backgroundColor: "rgba(0,0,0,0.7)",
         border: "1px solid #FFC527",
+        color: "#fff",
       },
       "&:active": {
         color: theme.white,

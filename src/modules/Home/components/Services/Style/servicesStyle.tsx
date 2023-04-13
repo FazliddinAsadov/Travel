@@ -130,7 +130,7 @@ const useStyles = createStyles((theme) => ({
     marginTop: "5%",
     boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
     "@media (max-width: 755px)": {
-      width: "380px",
+      width: "340px",
     },
   },
   img: {

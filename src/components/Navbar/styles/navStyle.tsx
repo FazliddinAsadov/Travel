@@ -21,18 +21,18 @@ const useStyles = createStyles((theme) => {
       borderTopLeftRadius: 0,
       borderTopWidth: 0,
       overflow: "hidden",
-
       [theme.fn.largerThan("sm")]: {
         display: "none",
       },
     },
 
     header: {
-      width: "90%",
-      margin: "0 auto",
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
+      [theme.fn.largerThan("sm")]: {
+        padding: "0 50px",
+      },
     },
     title: {
       fontSize: 24,
@@ -55,7 +55,7 @@ const useStyles = createStyles((theme) => {
     link: {
       display: "block",
       lineHeight: 1,
-      padding: "8px 12px",
+      padding: "8px 8px",
       borderRadius: theme.radius.sm,
       textDecoration: "none",
       color:

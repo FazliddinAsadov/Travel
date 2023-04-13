@@ -26,7 +26,9 @@ const Header = ({ image, title, titleTwo, p }: Props) => {
             <Text className={classes.two}>{titleTwo}</Text>
             <Box className={classes.line}></Box>
             <Text className={classes.three}>{p}</Text>
-            <Button className={classes.btn}>Learn More</Button>
+            <Button variant="contained" className={classes.btn}>
+              Learn More
+            </Button>
           </Group>
         </Box>
       </BackgroundImage>

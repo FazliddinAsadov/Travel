@@ -24,7 +24,7 @@ const PopularCart = () => {
             </Tabs.Tab>
           </Tabs.List>
         </Group>
-        <Grid className={classes.section} px={10}>
+        <Grid className={classes.section} m={0}>
           {popularData?.map((item: any) => (
             <Grid.Col
               md={6}

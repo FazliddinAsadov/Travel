@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Modal, Text } from "@mantine/core";
+import { Box, Group, Modal, Text } from "@mantine/core";
 import useStayles from "./Style/videoPlayStyle";
 import videoPlayLocaleEn from "./locale";
 import { BsFillPlayCircleFill } from "react-icons/bs";

@@ -1,23 +1,32 @@
-import React from "react";
-import carRentalsLocaleUz from "./locale";
-import CarHeader from "./components/Header/Header";
 import TextPart from "@components/Text/TextPart";
-import Service from "./components/Service/Service"
+import CarHeader from "./components/Header/Header";
+import carRentalsLocaleUz from "./locale";
+
+import useCarRentStyle from "./Style/useCarRentStyle";
+import Form from "./components/Form/Form";
+import { ServicesItem } from "./components/services/Services";
+import Fleets from "./components/ourFleet/Fleets";
+import { useMantineTheme } from "@mantine/core";
+
 type Props = {};
 
 const CarRentals = (props: Props) => {
+  const { classes } = useCarRentStyle();
+
   return (
     <>
       <CarHeader />
+      <Form />
       <TextPart
         title={carRentalsLocaleUz.servicesTitle}
         titleTwo={carRentalsLocaleUz.servicesTitleTwo}
       />
-      <Service />
+      <ServicesItem />
       <TextPart
-        title={carRentalsLocaleUz.aboutTitle}
-        titleTwo={carRentalsLocaleUz.aboutTitleTwo}
+        title={carRentalsLocaleUz.fleetTitle}
+        titleTwo={carRentalsLocaleUz.fleetTitleTwo}
       />
+      <Fleets />
     </>
   );
 };
