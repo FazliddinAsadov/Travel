@@ -36,8 +36,8 @@ function ArticleCardVertical() {
         <Flex
           direction={{ base: "column", md: "row" }}
           gap={{ base: "sm", sm: "xl" }}
-          justify={{ base: "xl", xl: "center" }}
-          className={classes.group}
+          justify={{ base: "md", md: "center" }}
+          className={classes.wrapper}
         >
           {ServiceData.map((data: any) => {
             return (
