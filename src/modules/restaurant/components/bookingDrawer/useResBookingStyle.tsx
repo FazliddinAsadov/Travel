@@ -7,7 +7,10 @@ const useResBookingStyle = createStyles((theme) => {
       top: "27%",
       right: 0,
       border: "2px  solid  #FFC527",
-      zIndex: 9999,
+      zIndex: 9,
+      // "@media (min-width: 576px) ": {
+      //   top: "80%",
+      // },
     },
     card: {
       width: "300px",

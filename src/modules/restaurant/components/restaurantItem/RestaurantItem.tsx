@@ -59,7 +59,6 @@ export function RestaurantItem({
   ...others
 }: ImageCheckboxProps &
   Omit<React.ComponentPropsWithoutRef<"button">, keyof ImageCheckboxProps>) {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [value, handleChange] = useUncontrolled({
     value: checked,
     defaultValue: defaultChecked,
@@ -67,7 +66,6 @@ export function RestaurantItem({
     onChange,
   });
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { classes, cx } = useStyles({ checked: value });
 
   return (
