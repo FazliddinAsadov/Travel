@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Card,
+  Checkbox,
   Drawer,
   Group,
   NumberInput,
@@ -94,8 +95,8 @@ const BookingDrawer = (props: Props) => {
                     >
                       Select Restaurant
                     </Accordion.Control>
-                    <Accordion.Panel>
-                      <Box className={classes.restairantItem}>
+                    <Accordion.Panel className={classes.restairant__scrool}>
+                      <Box className={classes.restairantItem} pt={20}>
                         <Box>
                           <Image
                             src="/images/reataurant.avif"
@@ -105,14 +106,28 @@ const BookingDrawer = (props: Props) => {
                           />
                         </Box>
                         <Box>
-                          <Text>Name</Text>
-                          <Text>Date</Text>
+                          <Text>OQTEPA</Text>
+                          <Text>19:00</Text>
                         </Box>
+                        <Group position="right">
+                          <Checkbox color="orange" />
+                        </Group>
                       </Box>
+
                       {/* <RestaurantItem /> */}
                     </Accordion.Panel>
                   </Accordion.Item>
                 </Accordion>
+                <Group>
+                  <Button
+                    mt={20}
+                    variant="contained"
+                    fullWidth
+                    className={classes.btn__booking}
+                  >
+                    Booking
+                  </Button>
+                </Group>
               </form>
             </Card>
           </Box>

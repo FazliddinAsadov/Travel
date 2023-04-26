@@ -19,7 +19,13 @@ const useResBookingStyle = createStyles((theme) => {
     restairantItem: {
       display: "flex",
       alignItems: "center",
+      justifyContent: "space-between",
       gap: 10,
+    },
+    restairant__scrool: {},
+    btn__booking: {
+      background: "#FFC527",
+      color: "#000",
     },
   };
 });
