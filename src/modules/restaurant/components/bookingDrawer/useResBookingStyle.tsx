@@ -15,6 +15,10 @@ const useResBookingStyle = createStyles((theme) => {
     card: {
       width: "300px",
       height: "60vh",
+      overflow: "auto",
+    },
+    select__restaurant: {
+      display: "flex",
     },
     restairantItem: {
       display: "flex",
@@ -22,7 +26,9 @@ const useResBookingStyle = createStyles((theme) => {
       justifyContent: "space-between",
       gap: 10,
     },
-    restairant__scrool: {},
+    restairant__scrool: {
+      overflow: "clip",
+    },
     btn__booking: {
       background: "#FFC527",
       color: "#000",

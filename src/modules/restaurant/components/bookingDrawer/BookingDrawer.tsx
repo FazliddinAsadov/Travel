@@ -8,12 +8,13 @@ import {
   Drawer,
   Group,
   NumberInput,
+  Radio,
   Text,
   rem,
   useMantineTheme,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import useResBookingStyle from "./useResBookingStyle";
 import {
   IconBrandBooking,
@@ -25,17 +26,27 @@ import {
 import { DatePickerInput, TimeInput } from "@mantine/dates";
 import Image from "next/image";
 import { RestaurantItem } from "../restaurantItem/RestaurantItem";
+import { useForm } from "@mantine/form";
 
 type Props = {};
 
 const BookingDrawer = (props: Props) => {
   const [opened, { open, close }] = useDisclosure(false);
+  const [selectRes, setSelectRes] = useState<any>(0);
   const { classes } = useResBookingStyle();
   const theme = useMantineTheme();
 
   const ref: any = useRef<HTMLInputElement>();
   const getColor = (color: string) =>
     theme.colors[color][theme.colorScheme === "dark" ? 5 : 7];
+
+  const form = useForm({
+    initialValues: { person: "", date: "", time: "" },
+  });
+
+  const handleSelectRes = (values: any) => {
+    setSelectRes(values);
+  };
 
   return (
     <Accordion
@@ -52,12 +63,15 @@ const BookingDrawer = (props: Props) => {
         <Accordion.Panel>
           <Box>
             <Card className={classes.card}>
-              <form>
+              <form
+                onSubmit={form.onSubmit((values) => handleSelectRes(values))}
+              >
                 <NumberInput
-                  defaultValue={18}
+                  defaultValue={1}
                   placeholder="Enter Person"
                   label="Person"
                   withAsterisk
+                  {...form.getInputProps("person")}
                 />
                 <DatePickerInput
                   dropdownType="modal"
@@ -70,7 +84,7 @@ const BookingDrawer = (props: Props) => {
                   withAsterisk
                   clearable
                   py={10}
-                  //   {...form.getInputProps("date")}
+                  {...form.getInputProps("date")}
                 />
                 <TimeInput
                   label="Time"
@@ -82,48 +96,27 @@ const BookingDrawer = (props: Props) => {
                   }
                   maw={400}
                   mx="auto"
+                  {...form.getInputProps("time")}
                 />
-                <Accordion variant="contained" pt={20}>
-                  <Accordion.Item value="photos">
-                    <Accordion.Control
-                      icon={
-                        <IconToolsKitchen2
-                          size={rem(20)}
-                          color={getColor("orange")}
-                        />
-                      }
-                    >
-                      Select Restaurant
-                    </Accordion.Control>
-                    <Accordion.Panel className={classes.restairant__scrool}>
-                      <Box className={classes.restairantItem} pt={20}>
-                        <Box>
-                          <Image
-                            src="/images/reataurant.avif"
-                            alt=""
-                            width={80}
-                            height={60}
-                          />
-                        </Box>
-                        <Box>
-                          <Text>OQTEPA</Text>
-                          <Text>19:00</Text>
-                        </Box>
-                        <Group position="right">
-                          <Checkbox color="orange" />
-                        </Group>
-                      </Box>
+                {selectRes.length > 0 ? (
+                  <Card className={classes.select__restaurant}>
+                    <ActionIcon>
+                      <IconToolsKitchen2
+                        size={rem(20)}
+                        color={getColor("orange")}
+                      />
+                    </ActionIcon>
+                    <Text>Select Restaurant</Text>
+                  </Card>
+                ) : null}
 
-                      {/* <RestaurantItem /> */}
-                    </Accordion.Panel>
-                  </Accordion.Item>
-                </Accordion>
                 <Group>
                   <Button
                     mt={20}
                     variant="contained"
                     fullWidth
                     className={classes.btn__booking}
+                    type="submit"
                   >
                     Booking
                   </Button>
