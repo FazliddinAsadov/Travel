@@ -15,7 +15,7 @@ const Fleets = () => {
   return (
     <Box my={30} py={30} sx={{ width: "80%", margin: "0 auto" }}>
       <Carousel
-        withIndicators
+        // withIndicators
         height={"auto"}
         slideSize="33.333333%"
         slideGap="md"
