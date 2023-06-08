@@ -27,12 +27,12 @@ const useStyles = createStyles((theme) => {
     },
 
     header: {
+      width: "85%",
+      margin: "0 auto",
       display: "flex",
       alignItems: "center",
-      justifyContent: "space-between",
-      [theme.fn.largerThan("sm")]: {
-        padding: "0 50px",
-      },
+      // justifyContent: "space-start",
+      [theme.fn.largerThan("sm")]: {},
     },
     title: {
       fontSize: 24,

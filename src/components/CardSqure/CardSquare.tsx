@@ -27,11 +27,13 @@ const CardSquare = ({ data }: Props) => {
           {data.map((item: any) => (
             <Grid.Col md={6} lg={3} key={item.id}>
               <Card shadow="sm" radius="md" withBorder>
-                <Card.Section component="a">
+                <Card.Section component="div">
                   <Image
-                    src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+                    src={item?.img}
+                    width={"100%"}
                     height={"100%"}
                     alt="Norway"
+                    sx={{ objectFit: "cover" }}
                   />
                 </Card.Section>
 

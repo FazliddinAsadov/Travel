@@ -7,7 +7,8 @@ const dataGit = [
     id: 1,
     name: "Jon Doe",
     email: "jon@gmail.com",
-    image: jon,
+    image:
+      "https://img.freepik.com/free-photo/tourist-with-thumb-up_1368-7035.jpg?size=626&ext=jpg&ga=GA1.2.30051411.1675524251&semt=ais",
     descr:
       "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
     phone: 998973030793,
@@ -31,7 +32,8 @@ const dataGit = [
     id: 2,
     name: "Jack Smith",
     email: "jacksmith@gmail.com",
-    image: jeck,
+    image:
+      "https://img.freepik.com/free-photo/brunette-man-traveler-white-tee-sunglasses-smiles-near-airport_197531-23099.jpg?size=626&ext=jpg&ga=GA1.2.30051411.1675524251&semt=ais",
     descr:
       "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
     phone: 998973030793,
@@ -54,7 +56,8 @@ const dataGit = [
     id: 3,
     name: "Monica Dersarachia",
     email: "dersarachia@gmail.com",
-    image: monica,
+    image:
+      "https://img.freepik.com/free-photo/brunette-longhaired-woman-denim-pants-brown-coat-poses-with-tickets-suitbag-portrait-happy-travel-girl-moves-smiles-isolated-yellow-background_197531-29293.jpg?size=626&ext=jpg&ga=GA1.2.30051411.1675524251&semt=location_fest_v1",
     descr:
       "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
     phone: 998973030793,
