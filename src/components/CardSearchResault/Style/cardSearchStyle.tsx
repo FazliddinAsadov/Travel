@@ -1,13 +1,10 @@
 import { createStyles, rem } from "@mantine/core";
 
 const useSearchResStyle = createStyles((theme) => ({
-  card: {
-    margin: "0  20px",
-    backgroundColor:
-      theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
-    "@media (max-width: 800px)": {
-      margin: "10px  0",
-    },
+  img_flex: {
+    display: "flex",
+    justifyContent: "flex-start",
+    gap: "10px",
   },
 
   title: {
