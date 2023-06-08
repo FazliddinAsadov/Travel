@@ -49,7 +49,7 @@ const Hotel = (props: Props) => {
   return (
     <Box className={classes.head}>
       <BackgroundImage
-        src="https://namangansquare.com/wp-content/uploads/2020/05/nsq-apartments-img-80.jpg"
+        src="https://www.spot.uz/media/img/2020/05/hf8of515904982537886_b.jpg"
         // src={imgBg}
         radius="sm"
         className={classes.background}

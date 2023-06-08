@@ -32,10 +32,11 @@ const CardSearchResault: React.FC<{
                 <Grid.Col>
                   <Box>
                     <Image
-                      src={item?.imageGeneral}
+                      src={item?.img}
                       alt="img"
                       height={200}
-                      width={250}
+                      width={465}
+                      sx={{ objectFit: "scale-down" }}
                     />
                   </Box>
                 </Grid.Col>

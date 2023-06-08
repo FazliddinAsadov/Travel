@@ -30,12 +30,7 @@ const Slider = () => {
           <Carousel.Slide key={git.id}>
             <Grid.Col md={12} lg={12}>
               <Paper radius="md" withBorder p="lg" className={classes.paper}>
-                <Avatar
-                  src="/images/git.jfif"
-                  size={120}
-                  radius={120}
-                  mx="auto"
-                />
+                <Avatar src={git?.image} size={120} radius={120} mx="auto" />
                 <Text ta="center" fz="lg" weight={500} mt="md">
                   {git?.name}
                 </Text>

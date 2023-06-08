@@ -65,7 +65,7 @@ const Navbar: React.FC<{
           mx={5}
         />
         <Text className={classes.title}>{navbarLocaleEn.title}</Text>
-        <Group spacing={5} className={classes.links} pl={500}>
+        <Group spacing={0} className={classes.links} pl={200}>
           {items}
         </Group>
 
