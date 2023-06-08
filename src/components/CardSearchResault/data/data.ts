@@ -66,7 +66,22 @@ const cardSerchResaultData = [
         img: oydinPlaza,
       },
     ],
-    img: "https://q-xx.bstatic.com/xdata/images/hotel/max500/408507514.jpg?k=433005efb2f86f95afc175f9a5f5c965ab1881596f0a66340d4cf4ccd493c335&o=",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubRW4sZdqq1ncnCCNHDqVNyFKJOWYKRr_4ICTQQ1ilvxiRF2oebT_jERjFlTXG_Dog0E&usqp=CAU",
+    images: [
+      {
+        id: 1,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnAUC1B_o007KK0saAazKhrAZa1KHPNG_RbRMXH0VeShsPawKwpjN-g85_iHnUnm2B79g&usqp=CAU",
+      },
+      {
+        id: 2,
+        img2: "https://avatars.mds.yandex.net/get-altay/2368846/2a00000173a52b1cdfc0c300b7364e27be4f/L",
+      },
+      {
+        id: 3,
+        img2: "https://q-xx.bstatic.com/xdata/images/hotel/max1000/408506913.jpg?k=3a8607d0c8002b3be978dfb07380f2cbdca6e75f925b3ccd577a88bef47f46c9",
+      },
+    ],
+
     title: "Orzu",
     address: "Namangan",
     descr: "lorem ipsum dolor sit amet",

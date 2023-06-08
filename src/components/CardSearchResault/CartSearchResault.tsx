@@ -28,16 +28,27 @@ const CardSearchResault: React.FC<{
         {(inputsrch?.length > 0 ? inputsrch : cardSerchResaultData).map(
           (item: any) => (
             <Box key={item.id}>
-              <Card withBorder radius="md" p={0} className={classes.card}>
+              <Card withBorder radius="md" p={0}>
                 <Grid.Col>
-                  <Box>
-                    <Image
-                      src={item?.img}
-                      alt="img"
-                      height={200}
-                      width={465}
-                      sx={{ objectFit: "scale-down" }}
-                    />
+                  <Box className={classes.img_flex}>
+                    <Box sx={{ width: "70%" }}>
+                      <Image
+                        src={item?.img}
+                        alt="img"
+                        height={"20%"}
+                        width={"100%"}
+                        sx={{ objectFit: "cover" }}
+                      />
+                    </Box>
+                    <Box sx={{ width: "30%" }}>
+                      <Image
+                        src={item?.img}
+                        alt="img"
+                        height={"40%"}
+                        width={"100%"}
+                        sx={{ objectFit: "cover" }}
+                      />
+                    </Box>
                   </Box>
                 </Grid.Col>
                 <Grid.Col>
@@ -72,7 +83,7 @@ const CardSearchResault: React.FC<{
                         <Box className={classes.square}>{item?.viewNumber}</Box>
                         <Text className={classes.view}>{item?.view}</Text>
                       </Box>
-                      <Button className={classes.buy__btn}>Search</Button>
+                      <Button className={classes.buy__btn}>Now Booking</Button>
                     </Box>
                   </Box>
                 </Grid.Col>
