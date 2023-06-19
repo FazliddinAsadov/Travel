@@ -6,7 +6,7 @@ const YoutubeVideo = () => {
     // access to player in all event handlers via event.target
     event.target.pauseVideo();
   };
-  const link = "https://www.youtube.com/watch?v=PJt7VJLJWyI";
+  const link = "https://www.youtube.com/watch?v=ut4a_c5lo1g";
   const opts: YouTubeProps["opts"] = {
     height: "600px",
     width: "100%",
@@ -16,6 +16,6 @@ const YoutubeVideo = () => {
     },
   };
 
-  return <YouTube videoId="PJt7VJLJWyI" opts={opts} onReady={onPlayerReady} />;
+  return <YouTube videoId="ut4a_c5lo1g" opts={opts} onReady={onPlayerReady} />;
 };
 export default YoutubeVideo;

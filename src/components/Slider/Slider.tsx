@@ -22,7 +22,7 @@ const Slider = () => {
         loop={true}
         plugins={[autoplay.current]}
         align="start"
-        withControls={false}
+        // withControls={false}
         className={classes.carousel}
         p={"5%"}
       >
@@ -41,7 +41,7 @@ const Slider = () => {
                   {git?.prices.map((price: any, idx: number) => (
                     <div key={idx}>
                       <Text ta="center" fz="lg" fw={500}>
-                        {price.value}
+                        ${price.value}
                       </Text>
                       <Text ta="center" fz="sm" c="dimmed">
                         {price.label}
@@ -54,6 +54,7 @@ const Slider = () => {
                   fullWidth
                   mt="md"
                   className={classes.sendBtn}
+                  // onClick={() => console.log("Send message")}
                 >
                   Send message
                 </Button>

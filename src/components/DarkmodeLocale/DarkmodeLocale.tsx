@@ -26,11 +26,19 @@ const DarkmodeLocale = () => {
         />
       </Drawer>
       {open ? (
-        <Box onClick={() => setOpen(false)} className={classes.itemsOne}>
+        <Box
+          onClick={() => setOpen(false)}
+          className={classes.itemsOne}
+          sx={{ cursor: "pointer" }}
+        >
           <FiSettings size={24} />
         </Box>
       ) : (
-        <Box onClick={() => setOpen(true)} className={classes.itemsTwo}>
+        <Box
+          onClick={() => setOpen(true)}
+          className={classes.itemsTwo}
+          sx={{ cursor: "pointer" }}
+        >
           <FiSettings size={24} />
         </Box>
       )}

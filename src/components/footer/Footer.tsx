@@ -37,7 +37,9 @@ export const Footer = ({ links }: FooterCenteredProps) => {
 
         <Group spacing="xs" position="right" noWrap className={classes.icon}>
           <ActionIcon size="lg" variant="default" radius="xl">
-            <BsTelegram className={classes.icon} />
+            <Link href="https://t.me/fazliddin020">
+              <BsTelegram className={classes.icon} />
+            </Link>
           </ActionIcon>
           <ActionIcon size="lg" variant="default" radius="xl">
             <BsInstagram className={classes.icon} />
@@ -46,7 +48,9 @@ export const Footer = ({ links }: FooterCenteredProps) => {
             <BsTwitter className={classes.icon} />
           </ActionIcon>
           <ActionIcon size="lg" variant="default" radius="xl">
-            <BsYoutube className={classes.icon} />
+            <Link href="https://www.youtube.com/channel/UC3ZgyarDrB2vBEMMZGyZe_w">
+              <BsYoutube className={classes.icon} />
+            </Link>
           </ActionIcon>
         </Group>
       </Box>
