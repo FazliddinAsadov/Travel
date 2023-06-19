@@ -73,11 +73,11 @@ const CardSquare = ({ data }: Props) => {
                     </Box>
                     <Box className={classes.icon__group}>
                       <FaWifi />
-                      <Text>{hotelLocaleUz.freeCofe}</Text>
+                      <Text>{hotelLocaleUz.freeInternet}</Text>
                     </Box>
                     <Box className={classes.icon__group}>
                       <FaParking />
-                      <Text>{hotelLocaleUz.freeCofe}</Text>
+                      <Text>{hotelLocaleUz.freeParking}</Text>
                     </Box>
                   </Box>
                   <Box>

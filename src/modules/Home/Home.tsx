@@ -37,7 +37,7 @@ const Home: NextPage = () => {
         title={homeLocaleEn.mapTitle}
         titleTwo={homeLocaleEn.mapTitleTwo}
       />
-      <Maps width={600} height={500} please={maps} />
+      <Maps width={600} height={300} please={maps} />
       <TextPart
         title={homeLocaleEn.gitTitle}
         titleTwo={homeLocaleEn.gitTitleTwo}
