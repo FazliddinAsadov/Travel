@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         defaultLocale={"uz"}
       >
         <Head>
-          <title>NamanganTurist.uz</title>
+          <title>Namangan_Travel</title>
           {/* bu yerda meta teglar boladi */}
           <meta name="theme-color" content="#000000" />
           <meta name="author" content="Fazliddin Asadov" />
