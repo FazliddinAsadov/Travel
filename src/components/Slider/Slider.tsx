@@ -54,7 +54,6 @@ const Slider = () => {
                   fullWidth
                   mt="md"
                   className={classes.sendBtn}
-                  // onClick={() => console.log("Send message")}
                 >
                   Send message
                 </Button>

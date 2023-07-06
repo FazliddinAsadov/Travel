@@ -32,7 +32,6 @@ type Props = {
 const SearchResault = ({ data, addSearchCtg }: Props) => {
   const { classes } = useSearchResStyle();
   const [srchRes, setSrchRes] = useState<any>();
-  console.log(srchRes);
 
   const form = useForm({
     initialValues: {
